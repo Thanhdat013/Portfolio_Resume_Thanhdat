@@ -1,7 +1,7 @@
 import React from "react";
-import Preloader from "../components/Preloader";
-import LeftPart from "../components/LeftPart";
-import RightPart from "../components/RightPart";
+import Preloader from "../components/content/preLoader/Preloader";
+import LeftPart from "../components/content/leftPart/LeftPart";
+import RightPart from "../components/content/rightPart/RightPart";
 import MobileMenu from "../components/mobile/MobileMenu";
 
 const Portfolio = () => {

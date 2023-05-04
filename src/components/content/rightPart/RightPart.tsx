@@ -1,5 +1,5 @@
 import React from "react";
-import HomeCv from "./content/HomeCv";
+import HomeCv from "../homeCv/HomeCv";
 
 const RightPart = () => {
   return (
