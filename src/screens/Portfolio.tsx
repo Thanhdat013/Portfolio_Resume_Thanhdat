@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { FloatButton } from "antd";
+
 import Preloader from "../components/content/preLoader/Preloader";
 import LeftPart from "../components/content/leftPart/LeftPart";
 import RightPart from "../components/content/rightPart/RightPart";
 import MobileMenu from "../components/mobile/MobileMenu";
 
 const Portfolio = () => {
+  const [showLeftPart, setShowLeftPart] = useState<boolean>(false);
+
   return (
     <div className="arlo_tm_wrapper_all">
       <div id="arlo_tm_popup_blog">
@@ -27,14 +31,21 @@ const Portfolio = () => {
       {/* <!-- CONTENT --> */}
       <div className="arlo_tm_content">
         {/* <!-- LEFTPART --> */}
-        <LeftPart />
+        <LeftPart
+          showLeftPart={showLeftPart}
+          setShowLeftPart={setShowLeftPart}
+        />
         {/* <!-- /LEFTPART --> */}
 
         {/* <!-- RIGHTPART --> */}
-        <RightPart />
+        <RightPart
+          showLeftPart={showLeftPart}
+          setShowLeftPart={setShowLeftPart}
+        />
         {/* <!-- /RIGHTPART --> */}
 
-        <a className="arlo_tm_totop" href="#"></a>
+        {/* <a className="arlo_tm_totop" href="#"></a> */}
+        <FloatButton.BackTop tooltip={<div>Scroll to top</div>} />
       </div>
     </div>
   );

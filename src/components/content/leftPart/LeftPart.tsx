@@ -1,8 +1,20 @@
 import desktopLogo from "~/assets/img/logo/desktop-logo.png";
-const LeftPart = () => {
+
+interface Iprops {
+  showLeftPart: boolean;
+  setShowLeftPart: (value: boolean) => void;
+}
+const LeftPart = (props: Iprops) => {
+  // const { showLeftPart, setShowLeftPart } = props;
   return (
     <>
-      <div className="arlo_tm_leftpart_wrap">
+      <div
+        className={
+          props.showLeftPart
+            ? "opened arlo_tm_leftpart_wrap"
+            : " arlo_tm_leftpart_wrap"
+        }
+      >
         <div className="leftpart_inner">
           <div className="logo_wrap">
             <a href="#">
@@ -23,10 +35,6 @@ const LeftPart = () => {
               <li>
                 <a href="#project">Project</a>
               </li>
-              <li>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-
               <li>
                 <a href="#contact">Contact</a>
               </li>
@@ -55,16 +63,23 @@ const LeftPart = () => {
                     <i className="xcon-instagram"></i>
                   </a>
                 </li>
-                <li>
-                  <a href="#">
-                    <i className="xcon-behance"></i>
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
-          <a className="arlo_tm_resize" href="#">
-            <i className="xcon-angle-left"></i>
+          <a
+            className={
+              !props.showLeftPart ? "arlo_tm_resize " : "arlo_tm_resize opened"
+            }
+            href="#"
+            onClick={() => props.setShowLeftPart(!props.showLeftPart)}
+          >
+            <i
+              className={
+                !props.showLeftPart
+                  ? "xcon-angle-left opened"
+                  : "xcon-angle-left"
+              }
+            ></i>
           </a>
         </div>
       </div>
