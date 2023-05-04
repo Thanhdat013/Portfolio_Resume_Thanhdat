@@ -19,22 +19,15 @@ const RightPart = (props: Iprops) => {
       >
         <div className="rightpart_inner">
           <HomeCv />
-
           {/* <!-- ABOUT --> */}
           <About />
-          {/* <!-- /ABOUT --> */}
-
           {/* <!-- SKILLS --> */}
           <Skill />
-          {/* <!-- /SKILLS --> */}
-
           {/* <!-- SERVICES --> */}
           <Project />
-          {/* <!-- /SERVICES --> */}
-
           {/* <!-- CONTACT & FOOTER --> */}
           <Contact />
-          {/* <!-- /CONTACT & FOOTER --> */}
+          ``
         </div>
       </div>
     </>

@@ -1,7 +1,12 @@
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import avatar from "~/assets/img/hero/avatar.jpg";
 const HomeCv = () => {
+  const handleScrollToAbout = () => {
+    const section = document.querySelector("#about");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
       {" "}
@@ -50,7 +55,7 @@ const HomeCv = () => {
               </div>
             </div>
             <div className="arlo_tm_arrow_wrap bounce anchor">
-              <a href="#about">
+              <a onClick={handleScrollToAbout}>
                 <i className="xcon-angle-double-down"></i>
               </a>
             </div>
