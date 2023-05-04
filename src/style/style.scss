@@ -208,6 +208,12 @@ svg {
   width: 15px;
   height: 15px;
 }
+.icon {
+  svg {
+    width: unset;
+    height: unset;
+  }
+}
 img.svg {
   width: 15px;
   height: 15px;
@@ -229,6 +235,7 @@ img.svg {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin-bottom: 100px;
 }
 .arlo_tm_content {
   width: 100%;
@@ -735,53 +742,53 @@ placeholder {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
-  .leftbox {
-    width: 35%;
-    float: left;
-    height: auto;
-    padding-right: 40px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    .about_image_wrap {
-      position: relative;
-      .image {
-        position: absolute;
-        z-index: 2;
-        .inner {
+    .leftbox {
+      width: 35%;
+      float: left;
+      height: auto;
+      padding-right: 40px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .about_image_wrap {
+        position: relative;
+        .image {
           position: absolute;
-          top: 0px;
-          bottom: 0px;
-          left: 0px;
-          right: 0px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
+          z-index: 2;
+          .inner {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
         }
-      }
-      .border {
-        .inner {
-          position: absolute;
-          top: 25px !important;
-          bottom: -25px !important;
-          left: 25px !important;
-          right: -25px !important;
-          border: 10px solid #041230;
+        .border {
+          .inner {
+            position: absolute;
+            top: 25px !important;
+            bottom: -25px !important;
+            left: 25px !important;
+            right: -25px !important;
+            border: 10px solid #041230;
+          }
         }
-      }
-      img {
-        opacity: 0;
+        img {
+          opacity: 0;
+        }
       }
     }
-  }
-  .rightbox {
-    width: 65%;
-    float: right;
-    padding: 0px 0px 0px 65px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    .rightbox {
+      width: 65%;
+      float: right;
+      padding: 0px 0px 0px 65px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
   }
   .subtitle {
     width: 100%;
@@ -1050,7 +1057,6 @@ placeholder {
   box-sizing: border-box;
   background-color: $background-color_5;
   padding: 90px 0px;
-  margin-bottom: 100px;
   .inner_wrap {
     width: 100%;
     height: auto;
@@ -1276,6 +1282,7 @@ placeholder {
         box-sizing: border-box;
         .inner {
           width: 100%;
+          min-height: 250px;
           height: auto;
           clear: both;
           float: left;
@@ -1291,7 +1298,9 @@ placeholder {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
+
           &:hover {
+            cursor: pointer;
             top: -5px;
           }
         }

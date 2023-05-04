@@ -753,5 +753,5 @@ function arlo_tm_hamburger(){
 			mobileMenu.slideDown();
 		}
 		return false;
-	});
+	})
 }
