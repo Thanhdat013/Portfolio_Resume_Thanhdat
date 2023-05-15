@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FloatButton } from "antd";
 import { isMobile } from "react-device-detect";
 
-import Preloader from "../components/content/preLoader/Preloader";
-import LeftPart from "../components/content/leftPart/LeftPart";
-import RightPart from "../components/content/rightPart/RightPart";
-import MobileMenu from "../components/mobile/MobileMenu";
+import Preloader from "~/components/content/preLoader/Preloader";
+import LeftPart from "~/components/content/leftPart/LeftPart";
+import RightPart from "~/components/content/rightPart/RightPart";
+import MobileMenu from "~/components/mobile/MobileMenu";
 
 const Portfolio = () => {
   const [showLeftPart, setShowLeftPart] = useState<boolean>(false);
@@ -19,17 +19,15 @@ const Portfolio = () => {
           <div className="inner_popup scrollable"></div>
         </div>
         <span className="close">
-          <a href="#"></a>
+          <a href="#home"></a>
         </span>
       </div>
 
       {/* <!-- PRELOADER --> */}
       <Preloader />
-      {/* <!-- /PRELOADER --> */}
 
       {/* <!-- MOBILE MENU --> */}
       <MobileMenu />
-      {/* <!-- /MOBILE MENU --> */}
 
       {/* <!-- CONTENT --> */}
       <div className="arlo_tm_content">
@@ -38,16 +36,13 @@ const Portfolio = () => {
           showLeftPart={showLeftPart}
           setShowLeftPart={setShowLeftPart}
         />
-        {/* <!-- /LEFTPART --> */}
 
         {/* <!-- RIGHTPART --> */}
         <RightPart
           showLeftPart={showLeftPart}
           setShowLeftPart={setShowLeftPart}
         />
-        {/* <!-- /RIGHTPART --> */}
 
-        {/* <a className="arlo_tm_totop" href="#"></a> */}
         <FloatButton.BackTop tooltip={<div>Scroll to top</div>} />
       </div>
     </div>

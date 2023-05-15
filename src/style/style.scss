@@ -227,7 +227,12 @@ img.svg {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.arlo_tm_section:first-child {
+  padding: 0;
+}
 .arlo_tm_section {
+  background-color: #f6f7fd;
+  padding-top: 100px;
   width: 100%;
   height: auto;
   clear: both;
@@ -235,7 +240,7 @@ img.svg {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
 }
 .arlo_tm_content {
   width: 100%;
@@ -414,7 +419,7 @@ placeholder {
   }
   .leftpart_bottom {
     position: absolute;
-    left: 60px;
+    left: 25%;
     bottom: 38px;
     .social_wrap {
       width: 100%;
@@ -430,19 +435,19 @@ placeholder {
         margin: 0px;
         list-style-type: none;
         li {
-          margin: 0px 10px 0px 0px;
+          margin: 0px 16px 0px 0px;
           display: inline-block;
           &:last-child {
             margin-right: 0px;
           }
           a {
             text-decoration: none;
-            color: $color_2;
             -webkit-transition: all 0.3s ease;
             -moz-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
+            color: #f9fbe7;
             &:hover {
               color: $color_3;
             }
@@ -527,7 +532,7 @@ placeholder {
   height: auto;
   clear: both;
   float: left;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -912,6 +917,7 @@ placeholder {
   transform: translateX(-50%);
   margin-left: -21px;
   z-index: 55;
+  cursor: pointer;
   a {
     text-decoration: none;
     color: $color_2;
@@ -937,7 +943,7 @@ placeholder {
     position: absolute;
     content: "";
     width: 6px;
-    height: 72px;
+    height: 48px;
     background-color: $background-color_3;
     top: 2px;
   }
@@ -956,7 +962,7 @@ placeholder {
   }
 }
 .arlo_tm_title_holder.contact {
-  padding-bottom: 93px;
+  padding-bottom: 36px;
 }
 .arlo_tm_about_wrapper_all {
   width: 100%;
@@ -967,14 +973,13 @@ placeholder {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
-  height: auto;
   clear: both;
   float: left;
   background-color: $background-color_1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding-top: 100px;
 }
 .arlo_tm_main_title_holder {
   width: 100%;
@@ -1256,11 +1261,12 @@ placeholder {
   clear: both;
   float: left;
   background-color: $background-color_1;
-  margin-bottom: 70px;
+  // margin-bottom: 70px;
   text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding-top: 100px;
   .arlo_tm_title_holder_wrap {
     margin-bottom: 93px;
   }
@@ -1272,6 +1278,7 @@ placeholder {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin-bottom: 70px;
     ul {
       margin: 0px 0px 0px -30px;
       list-style-type: none;
@@ -1983,12 +1990,11 @@ placeholder {
   height: auto;
   clear: both;
   float: left;
-  background-color: $background-color_1;
+  background-color: #f6f7fd;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   .leftbox {
-    width: 40%;
     height: auto;
     float: left;
     padding-right: 40px;
@@ -2006,32 +2012,32 @@ placeholder {
       ul {
         margin: 0px;
         list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
         li {
           margin: 0px 0px 15px 0px;
+          width: 50%;
           label {
             font-family: $font-family_2;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 16px;
             color: $color_5;
           }
           span {
             padding-left: 5px;
+            font-size: 16px;
           }
           a {
+            font-size: 16px;
             text-decoration: none;
-            color: $color_5;
+            color: #39b5e0;
+            &:hover {
+              color: #e90064;
+            }
           }
         }
       }
     }
-  }
-  .rightbox {
-    width: 60%;
-    height: auto;
-    float: right;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
   }
 }
 .arlo_tm_contact_wrap {
@@ -2151,7 +2157,7 @@ placeholder {
   height: auto;
   clear: both;
   float: left;
-  text-align: left;
+  text-align: center;
   background-color: $background-color_2;
   padding: 50px 0px;
   -webkit-box-sizing: border-box;
@@ -2991,9 +2997,6 @@ placeholder {
   .arlo_tm_title_holder {
     h3 {
       font-size: 45px;
-    }
-    &:before {
-      top: -2px;
     }
   }
   .arlo_tm_services_wrap {

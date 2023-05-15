@@ -27,7 +27,7 @@ const About = () => {
           <div className="container">
             <div className="arlo_tm_title_holder">
               <h3>About Me</h3>
-              <span>Main informations about me</span>
+              <span>Các thông tin chính về tôi</span>
             </div>
             <div className="arlo_tm_about_wrap">
               <div className="author_wrap">
@@ -54,15 +54,13 @@ const About = () => {
                 <div className="rightbox">
                   <div className="arlo_tm_mini_title_holder">
                     <h4>
-                      I'm Alan Michaelis and &nbsp;
+                      Mình là Thành Đạt &nbsp;
                       <TypeAnimation
                         sequence={[
-                          "Freelance",
+                          "Lập trình viên Front-end",
                           2000, // Waits 1s
-                          "Ui/UX ",
+                          "Front-end",
                           2000, // Waits 2s
-                          "Engiiner",
-                          2000,
                         ]}
                         wrapper="span"
                         cursor={true}
@@ -76,62 +74,39 @@ const About = () => {
                   </div>
                   <div className="definition">
                     <p>
-                      Hi! My name is <strong>Alan Michaelis</strong>. I am a Web
-                      Developer, and I'm very passionate and dedicated to my
-                      work. With 20 years experience as a professional Web
-                      developer, I have acquired the skills and knowledge
-                      necessary to make your project a success. I enjoy every
-                      step of the design process, from discussion and
-                      collaboration to concept and execution, but I find the
-                      most satisfaction in seeing the finished product do
-                      everything for you that it was created to do.
+                      Xin chào mọi người, mình tên là <strong>Thành Đạt</strong>
+                      . Mình là một lập trình viên Front-end. Hiện tại mình chưa
+                      có nhiều kinh nghiệm nên rất mong muốn được tham gia và
+                      làm việc để tăng thêm kiến thức
                     </p>
                   </div>
                   <div className="about_short_contact_wrap">
                     <ul>
                       <li>
                         <span>
-                          <label>Birthday:</label> 01.07.1990
+                          <label>Sinh nhật:</label> 24.05.1997
                         </span>
                       </li>
                       <li>
                         <span>
-                          <label>Gender</label> 01.07.1990
+                          <label>Giới tính</label> Nam
                         </span>
                       </li>
+
                       <li>
                         <span>
-                          <label>Interests:</label> Soccer, UFC
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <label>Study:</label> Chicago University
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <label>Degree:</label> Master
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <label>Website:</label>
-                          <a href="#">www.mywebsite.com</a>
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <label>Mail:</label>
-                          <a href="mailto:example@gmail.com">
-                            mymail&#64;gmail.com
+                          <label>Email:</label>
+                          <a href="mailto:kimthanhdat0510@gmail.com">
+                            kimthanhdat0510&#64;gmail.com
                           </a>
                         </span>
                       </li>
                       <li>
                         <span>
                           <label>Git hub:</label>
-                          <a href="#">&#64;myusername</a>
+                          <a href="https://github.com/Thanhdat013">
+                            github.com/Thanhdat013
+                          </a>
                         </span>
                       </li>
                     </ul>

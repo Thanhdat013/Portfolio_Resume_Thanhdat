@@ -27,7 +27,6 @@ const RightPart = (props: Iprops) => {
           <Project />
           {/* <!-- CONTACT & FOOTER --> */}
           <Contact />
-          ``
         </div>
       </div>
     </>

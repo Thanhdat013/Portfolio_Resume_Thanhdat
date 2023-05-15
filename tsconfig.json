@@ -2,7 +2,8 @@
   "compilerOptions": {
     // rest of the template
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "~/components*": ["./src/components*"]
     },
 
     "target": "ESNext",
@@ -22,7 +23,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "strictPropertyInitialization": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

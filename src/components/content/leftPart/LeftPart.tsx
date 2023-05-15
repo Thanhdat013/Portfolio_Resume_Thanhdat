@@ -1,38 +1,40 @@
-import desktopLogo from "~/assets/img/logo/desktop-logo.png";
-import { useState, useEffect } from "react";
-import { isMobile } from "react-device-detect";
-
-interface Iprops {
-  showLeftPart: boolean;
-  setShowLeftPart: (value: boolean) => void;
+import desktopLogo from "~/assets/img/logo/desktop-logo.png"
+import { useState, useEffect } from "react"
+import { isMobile } from "react-device-detect"
+import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs"
+interface Props {
+  showLeftPart: boolean
+  setShowLeftPart: (value: boolean) => void
 }
-const LeftPart = (props: Iprops) => {
-  const [activeTab, setActiveTab] = useState<string>("home");
+const LeftPart = (props: Props) => {
+  const [activeTab, setActiveTab] = useState<string>("home")
 
   useEffect(() => {
-    const { hash } = window.location;
-    const tab = hash.replace("#", "");
-    setActiveTab(tab);
-    const section = document.querySelector(`${tab}`);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    const { hash } = window.location
+    if (hash) {
+      const tab = hash.replace("#", "")
+      setActiveTab(tab)
+      const section = document.querySelector(`${tab}`)
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
     }
-  }, []);
+  }, [])
 
   const handleScrollTab = (
     tab: string,
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
-    e.preventDefault();
-    setActiveTab(tab);
-    const section = document.querySelector(`#${tab}`);
+    e.preventDefault()
+    setActiveTab(tab)
+    const section = document.querySelector(`#${tab}`)
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
       setTimeout(() => {
-        window.location.hash = tab;
-      }, 1000);
+        window.location.hash = tab
+      }, 1000)
     }
-  };
+  }
   return (
     <>
       <div
@@ -112,22 +114,32 @@ const LeftPart = (props: Iprops) => {
               <ul>
                 <li>
                   <a href="#">
-                    <i className="xcon-facebook"></i>
+                    <BsFacebook
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                      }}
+                    />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i className="xcon-twitter"></i>
+                    <BsGithub
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                      }}
+                    />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i className="xcon-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="xcon-instagram"></i>
+                    <BsLinkedin
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                      }}
+                    />
                   </a>
                 </li>
               </ul>
@@ -142,8 +154,8 @@ const LeftPart = (props: Iprops) => {
               }
               href="#"
               onClick={(e) => {
-                e.preventDefault();
-                props.setShowLeftPart(!props.showLeftPart);
+                e.preventDefault()
+                props.setShowLeftPart(!props.showLeftPart)
               }}
             >
               <i
@@ -158,7 +170,7 @@ const LeftPart = (props: Iprops) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default LeftPart;
+export default LeftPart

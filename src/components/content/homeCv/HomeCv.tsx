@@ -35,18 +35,16 @@ const HomeCv = () => {
                     I'm a &nbsp;
                     <TypeAnimation
                       sequence={[
-                        "Freelance",
+                        "Front-end developer",
                         2000, // Waits 1s
-                        "Ui/UX ",
-                        2000, // Waits 2s
-                        "Engiiner",
+                        "Front-end ",
                         2000,
                       ]}
                       wrapper="span"
                       cursor={true}
                       repeat={Infinity}
                       style={{
-                        fontSize: "1.4em",
+                        fontSize: "1.2em",
                         display: "inline-block",
                       }}
                     />

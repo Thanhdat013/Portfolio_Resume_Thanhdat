@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Contact = () => {
   return (
@@ -8,30 +8,38 @@ const Contact = () => {
         <div className="container">
           <div className="arlo_tm_title_holder contact">
             <h3>Contact Me</h3>
-            <span>Get in touch with me</span>
           </div>
         </div>
         <div className="arlo_tm_footer_contact_wrapper_all">
           <div className="arlo_tm_contact_wrap_all">
             <div className="container">
               <div className="leftbox">
-                <div className="arlo_tm_mini_title_holder contact">
-                  <h4>Get in Touch</h4>
-                </div>
                 <div className="short_info_wrap">
                   <ul>
                     <li>
                       <p>
-                        <label>Address:</label>
-                        <span>123 Qwerty Avenue NYC, USA</span>
+                        <label>linkedin:</label>
+                        <span>
+                          <a
+                            href="https://www.linkedin.com/in/%C4%91%E1%BA%A1t-kim-0b3b981aa/"
+                            target="_blank"
+                            rel="noopener"
+                          >
+                            https://www.linkedin.com/in/Thanhdat
+                          </a>
+                        </span>
                       </p>
                     </li>
                     <li>
                       <p>
                         <label>Email:</label>
                         <span>
-                          <a href="mailto:example@gmail.com">
-                            thanhdat0510@gmail.com
+                          <a
+                            href="mailto: kimthanhdat0510@gmail.com@gmail.com"
+                            target="_blank"
+                            rel="noopener"
+                          >
+                            kimthanhdat0510@gmail.com
                           </a>
                         </span>
                       </p>
@@ -39,61 +47,24 @@ const Contact = () => {
                     <li>
                       <p>
                         <label>Phone:</label>
-                        <span>+77 022 177 05 05</span>
+                        <span>+84 338 575 296</span>
                       </p>
                     </li>
                     <li>
                       <p>
-                        <label>Website:</label>
+                        <label>Github:</label>
                         <span>
-                          <a href="mailto:example@gmail.com" target="_blank">
-                            www.yourdomain.com
+                          <a
+                            href="https://github.com/Thanhdat013"
+                            target="_blank"
+                            rel="noopener"
+                          >
+                            https://github.com/Thanhdat013
                           </a>
                         </span>
                       </p>
                     </li>
                   </ul>
-                </div>
-              </div>
-              <div className="rightbox">
-                <div className="arlo_tm_contact_wrap">
-                  <div className="main_input_wrap">
-                    <form
-                      action="http://frenify.com/"
-                      method="post"
-                      className="contact_form"
-                      id="contact_form"
-                    >
-                      <div
-                        className="returnmessage"
-                        data-success="Your message has been received, We will contact you soon."
-                      ></div>
-                      <div className="empty_notice">
-                        <span>Please Fill Required Fields</span>
-                      </div>
-                      <div className="wrap">
-                        <input id="name" type="text" placeholder="Your Name" />
-                      </div>
-                      <div className="wrap">
-                        <input
-                          id="email"
-                          type="text"
-                          placeholder="Your Email"
-                        />
-                      </div>
-                      <div className="wrap">
-                        <textarea
-                          id="message"
-                          placeholder="Your Message"
-                        ></textarea>
-                      </div>
-                      <div className="arlo_tm_button">
-                        <a id="send_message" href="#">
-                          <span>Send Message</span>
-                        </a>
-                      </div>
-                    </form>
-                  </div>
                 </div>
               </div>
             </div>
@@ -106,7 +77,7 @@ const Contact = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
