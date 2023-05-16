@@ -1,4 +1,4 @@
-import React from "react"
+import { isMobile } from "react-device-detect"
 
 const Contact = () => {
   return (
@@ -14,7 +14,13 @@ const Contact = () => {
           <div className="arlo_tm_contact_wrap_all">
             <div className="container">
               <div className="leftbox">
-                <div className="short_info_wrap">
+                <div
+                  className={
+                    isMobile
+                      ? "short_info_wrap contact-mobile"
+                      : "short_info_wrap"
+                  }
+                >
                   <ul>
                     <li>
                       <p>

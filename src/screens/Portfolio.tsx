@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
-import { FloatButton } from "antd";
-import { isMobile } from "react-device-detect";
+import { useEffect, useState } from "react"
+import { FloatButton } from "antd"
+import { isMobile } from "react-device-detect"
 
-import Preloader from "~/components/content/preLoader/Preloader";
-import LeftPart from "~/components/content/leftPart/LeftPart";
-import RightPart from "~/components/content/rightPart/RightPart";
-import MobileMenu from "~/components/mobile/MobileMenu";
+import Preloader from "~/components/content/preLoader/Preloader"
+import LeftPart from "~/components/content/leftPart/LeftPart"
+import RightPart from "~/components/content/rightPart/RightPart"
+import MobileMenu from "~/components/mobile/MobileMenu"
 
 const Portfolio = () => {
-  const [showLeftPart, setShowLeftPart] = useState<boolean>(false);
+  const [showLeftPart, setShowLeftPart] = useState<boolean>(false)
   useEffect(() => {
-    if (isMobile) setShowLeftPart(true);
-  }, [isMobile]);
+    if (isMobile) setShowLeftPart(true)
+  }, [isMobile])
   return (
     <div className="arlo_tm_wrapper_all">
       <div id="arlo_tm_popup_blog">
@@ -46,7 +46,7 @@ const Portfolio = () => {
         <FloatButton.BackTop tooltip={<div>Scroll to top</div>} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

@@ -1,9 +1,10 @@
-import React, { useState } from "react"
 import { Modal } from "antd"
+import { useState } from "react"
+import { isMobile } from "react-device-detect"
+
 import { FaReact } from "react-icons/fa"
 import { MdOutlineQuiz } from "react-icons/md"
 import { SiNextdotjs } from "react-icons/si"
-
 interface DataDetail {
   image: JSX.Element
   shortDescription: string
@@ -123,7 +124,7 @@ const Project = () => {
           title={
             dataDetail && dataDetail.title ? `Dự án ${dataDetail.title}` : ""
           }
-          width={"32vw"}
+          width={isMobile ? "70vw" : "32vw"}
           open={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}

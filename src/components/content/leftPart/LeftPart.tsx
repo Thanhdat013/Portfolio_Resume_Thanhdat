@@ -123,7 +123,11 @@ const LeftPart = (props: Props) => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://github.com/Thanhdat013"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <BsGithub
                       style={{
                         width: "30px",
@@ -133,7 +137,11 @@ const LeftPart = (props: Props) => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.linkedin.com/in/%C4%91%E1%BA%A1t-kim-0b3b981aa/"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <BsLinkedin
                       style={{
                         width: "30px",

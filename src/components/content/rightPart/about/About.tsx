@@ -1,24 +1,24 @@
-import { TypeAnimation } from "react-type-animation";
-import { useRef, useEffect } from "react";
-import portrait from "~/assets/img/about/1.jpg";
-import bgi from "~/assets/img/about/550x640.jpg";
-import myCv from "~/assets/cv/v1.0-Detail-Debugging.pdf";
-import Parallax from "parallax-js";
+import { TypeAnimation } from "react-type-animation"
+import { useRef, useEffect } from "react"
+import portrait from "~/assets/img/about/1.jpg"
+import bgi from "~/assets/img/about/550x640.jpg"
+import myCv from "~/assets/cv/v1.0-Detail-Debugging.pdf"
+import Parallax from "parallax-js"
+import { isMobile } from "react-device-detect"
 const About = () => {
-  const sceneEl = useRef(null);
+  const sceneEl = useRef(null)
 
   useEffect(() => {
     if (sceneEl && sceneEl.current) {
       const parallaxInstance = new Parallax(sceneEl.current, {
         relativeInput: true,
         hoverOnly: true,
-      });
-      parallaxInstance.enable();
-      return () => parallaxInstance.disable();
+      })
+      parallaxInstance.enable()
+      return () => parallaxInstance.disable()
     }
-  }, []);
-
-  <div ref={sceneEl}>{/* html */}</div>;
+  }, [])
+  ;<div ref={sceneEl}>{/* html */}</div>
 
   return (
     <>
@@ -31,7 +31,7 @@ const About = () => {
             </div>
             <div className="arlo_tm_about_wrap">
               <div className="author_wrap">
-                <div className="leftbox">
+                <div className={isMobile ? "leftbox about-mobile" : "leftbox"}>
                   <div
                     className="about_image_wrap parallax"
                     ref={sceneEl}
@@ -51,7 +51,9 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="rightbox">
+                <div
+                  className={isMobile ? "rightbox about-mobile" : "rightbox"}
+                >
                   <div className="arlo_tm_mini_title_holder">
                     <h4>
                       Mình là Thành Đạt &nbsp;
@@ -127,7 +129,7 @@ const About = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default About

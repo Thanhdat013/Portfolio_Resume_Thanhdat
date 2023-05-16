@@ -31,37 +31,6 @@ $background-color_14: #333333;
 $background-color_15: rgba(4, 18, 48, 0.97);
 $border-bottom-color_1: #fff;
 
-/*@charset "utf-8";*/
-/*
-/*	Copyright (c) 2018 Marketify
-/*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
-
-
-	01) ARLO BASE
-	02) ARLO CONTENT
-	03) ARLO ABOUT
-	04) ARLO SERVICES
-	05) ARLO COUNTERBOX
-	06) ARLO PORTFOLIO
-	07) ARLO TESTIMONIALS
-	08) ARLO NEWS
-	09) ARLO CONTACT
-	09) ARLO CONTACT
-	10) ARLO TO TOP
-	11) ARLO PARTICLE HOMEPAGE
-	12) ARLO RIPPLE HOMEPAGE
-	13) ARLO PORTFOLIO SINGLE
-	14) ARLO MOBILE HEADER
-    15) ARLO MEDIA QUERIES (FOR SMALL DEVICES)
-
-
-/*---------------------------------------------------*/
-/*	01) ARLO BASE
-/*---------------------------------------------------*/
-/*---------------------------------------------------*/
-/*	02) ARLO CONTENT
-/*---------------------------------------------------*/
 @-webkit-keyframes bounce {
   0%,
   20%,
@@ -96,6 +65,15 @@ $border-bottom-color_1: #fff;
   60% {
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
+  }
+}
+
+@keyframes showMenuMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*---------------------------------------------------*/
@@ -758,6 +736,9 @@ placeholder {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+      &.about-mobile {
+        width: 0;
+      }
       .about_image_wrap {
         position: relative;
         .image {
@@ -796,6 +777,9 @@ placeholder {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+      &.about-mobile {
+        width: 100%;
+      }
     }
   }
   .subtitle {
@@ -2009,6 +1993,13 @@ placeholder {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+      &.contact-mobile {
+        ul {
+          li {
+            width: 100% !important;
+          }
+        }
+      }
       ul {
         margin: 0px;
         list-style-type: none;
@@ -2158,7 +2149,7 @@ placeholder {
   clear: both;
   float: left;
   text-align: center;
-  background-color: $background-color_2;
+  background-color: #19a7ce;
   padding: 50px 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2677,7 +2668,7 @@ placeholder {
     height: auto;
     clear: both;
     float: left;
-    padding: 30px 20px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2686,152 +2677,20 @@ placeholder {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
-}
-.arlo_tm_trigger {
-  width: auto;
-  .hamburger {
-    padding: 15px 15px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: $color_14;
-    text-transform: none;
-    background-color: $background-color_10;
-    border: 0;
-    margin: 0;
-    overflow: visible;
-    padding: 0px;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
+    .logo {
+      width: 36px;
+      height: 30px;
+    }
     .hamburger-inner {
-      before {
-        background-color: $background-color_1;
-        width: 30px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-      }
-      after {
-        background-color: $background-color_1;
-        width: 30px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-      }
-      background-color: $background-color_1;
-      width: 30px;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-  }
-  .hamburger-box {
-    width: 30px;
-    height: 18px;
-    display: inline-block;
-    position: relative;
-    display: block;
-  }
-  .hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: -2px;
-    width: 30px;
-    height: 2px;
-    background-color: $background-color_14;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    before {
-      content: "";
-      display: block;
-      top: -8px;
-    }
-    after {
-      content: "";
-      display: block;
-      bottom: -10px;
-    }
-  }
-  .hamburger--collapse-r {
-    .hamburger-inner {
-      top: auto;
-      bottom: 0;
-      transition-duration: 0.13s;
-      transition-delay: 0.13s;
-      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      after {
-        top: -16px;
-        transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-          opacity 0.1s linear;
-      }
-      before {
-        transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-          transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      }
-    }
-  }
-  .hamburger--collapse-r.is-active {
-    .hamburger-inner {
-      transform: translate3d(0, -10px, 0) rotate(45deg);
-      transition-delay: 0.22s;
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      after {
-        top: 0;
-        opacity: 0;
-        transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-          opacity 0.1s 0.22s linear;
-      }
-      before {
-        top: 0;
-        transform: rotate(90deg);
-        transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-          transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-      }
+      width: 36px;
+      height: 30px;
+      color: #fff;
+      cursor: pointer;
+      background-color: transparent;
     }
   }
 }
-.hamburger-inner {
-  before {
-    width: 30px;
-    height: 2px;
-    background-color: $background-color_14;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-  }
-  after {
-    width: 30px;
-    height: 2px;
-    background-color: $background-color_14;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-  }
-}
+
 .arlo_tm_mobile_menu_wrap {
   width: 100%;
   height: auto;
@@ -2845,6 +2704,11 @@ placeholder {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  &.is-active {
+    animation: showMenuMobile 0.5s linear;
+    display: block;
+  }
+
   .mob_menu {
     width: 100%;
     height: auto;
@@ -2867,6 +2731,9 @@ placeholder {
           font-family: $font-family_2;
           font-weight: 600;
           font-size: 19px;
+          &.active {
+            color: $color_3;
+          }
         }
       }
     }
