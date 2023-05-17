@@ -22,14 +22,34 @@ const About = () => {
 
   return (
     <>
-      <div className="arlo_tm_section relative" id="about">
-        <div className="arlo_tm_about_wrapper_all">
+      <div
+        style={{ height: "100vh" }}
+        className={
+          isMobile
+            ? "arlo_tm_section device-mobile relative"
+            : "arlo_tm_section relative"
+        }
+        id="about"
+      >
+        <div
+          className={
+            isMobile
+              ? "arlo_tm_about_wrapper_all about-mobile"
+              : "arlo_tm_about_wrapper_all"
+          }
+        >
           <div className="container">
             <div className="arlo_tm_title_holder">
               <h3>About Me</h3>
-              <span>Các thông tin chính về tôi</span>
+              <span>Main information about me</span>
             </div>
-            <div className="arlo_tm_about_wrap">
+            <div
+              className={
+                isMobile
+                  ? "arlo_tm_about_wrap about-mobile"
+                  : "arlo_tm_about_wrap"
+              }
+            >
               <div className="author_wrap">
                 <div className={isMobile ? "leftbox about-mobile" : "leftbox"}>
                   <div
@@ -56,19 +76,19 @@ const About = () => {
                 >
                   <div className="arlo_tm_mini_title_holder">
                     <h4>
-                      Mình là Thành Đạt &nbsp;
+                      Hi there...I'm a &nbsp;
                       <TypeAnimation
                         sequence={[
-                          "Lập trình viên Front-end",
+                          "Intern Front-end",
                           2000, // Waits 1s
-                          "Front-end",
+                          "Fresher Front-end",
                           2000, // Waits 2s
                         ]}
                         wrapper="span"
                         cursor={true}
                         repeat={Infinity}
                         style={{
-                          fontSize: "1.2em",
+                          fontSize: "1em",
                           display: "inline-block",
                         }}
                       />
@@ -76,22 +96,22 @@ const About = () => {
                   </div>
                   <div className="definition">
                     <p>
-                      Xin chào mọi người, mình tên là <strong>Thành Đạt</strong>
-                      . Mình là một lập trình viên Front-end. Hiện tại mình chưa
-                      có nhiều kinh nghiệm nên rất mong muốn được tham gia và
-                      làm việc để tăng thêm kiến thức
+                      Hi, my name is <strong>Thanh Dat</strong>. I was
+                      originally a refrigeration engineer from University of
+                      Science and Technology, but I have a passion for
+                      programming so I want to pursue the path that I love.
                     </p>
                   </div>
                   <div className="about_short_contact_wrap">
                     <ul>
                       <li>
                         <span>
-                          <label>Sinh nhật:</label> 24.05.1997
+                          <label>Birthday:</label> 24.05.1997
                         </span>
                       </li>
                       <li>
                         <span>
-                          <label>Giới tính</label> Nam
+                          <label>Gender</label> Male
                         </span>
                       </li>
 

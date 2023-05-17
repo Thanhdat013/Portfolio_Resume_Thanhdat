@@ -5,6 +5,8 @@ import { isMobile } from "react-device-detect"
 import { FaReact } from "react-icons/fa"
 import { MdOutlineQuiz } from "react-icons/md"
 import { SiNextdotjs } from "react-icons/si"
+import { BsArrowRight } from "react-icons/bs"
+
 interface DataDetail {
   image: JSX.Element
   shortDescription: string
@@ -91,14 +93,34 @@ const Project = () => {
   return (
     <>
       {" "}
-      <div className="arlo_tm_section" id="project">
-        <div className="arlo_tm_services_wrap">
+      <div
+        style={{ paddingTop: "50px" }}
+        className={
+          isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
+        }
+        id="project"
+      >
+        <div
+          className={
+            isMobile
+              ? "arlo_tm_services_wrap skill-mobile"
+              : "arlo_tm_services_wrap"
+          }
+        >
           <div className="container">
-            <div className="arlo_tm_title_holder">
+            <div
+              className={
+                isMobile
+                  ? "arlo_tm_title_holder project-mobile"
+                  : "arlo_tm_title_holder"
+              }
+            >
               <h3>My Project</h3>
-              <span>Các dự án đã làm</span>
+              <span>Project done</span>
             </div>
-            <div className="list_wrap">
+            <div
+              className={isMobile ? "list_wrap project-mobile" : "list_wrap"}
+            >
               <ul>
                 {dataProject.map((item, index) => (
                   <li key={index} onClick={() => showModal(item)}>
@@ -109,6 +131,17 @@ const Project = () => {
                       </div>
                       <div className="text">
                         <p>{item.shortDescription}</p>
+                      </div>
+                      <div
+                        style={{
+                          marginTop: "8px",
+                          display: "flex",
+                          gap: "16px",
+                          alignItems: "center",
+                        }}
+                      >
+                        <BsArrowRight />
+                        <p>See more</p>
                       </div>
                     </div>
                   </li>

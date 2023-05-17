@@ -1,16 +1,22 @@
-import { TypeAnimation } from "react-type-animation";
-import avatar from "~/assets/img/hero/avatar.jpg";
+import { isMobile } from "react-device-detect"
+import { TypeAnimation } from "react-type-animation"
+import avatar from "~/assets/img/hero/avatar.jpg"
 const HomeCv = () => {
   const handleScrollToAbout = () => {
-    const section = document.querySelector("#about");
+    const section = document.querySelector("#about")
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
     }
-  };
+  }
   return (
     <>
       {" "}
-      <div className="arlo_tm_section" id="home">
+      <div
+        className={
+          isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
+        }
+        id="home"
+      >
         <div className="arlo_tm_hero_header_wrap">
           <div className="arlo_tm_universal_box_wrap">
             <div className="bg_wrap">
@@ -61,7 +67,7 @@ const HomeCv = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default HomeCv;
+export default HomeCv

@@ -4,7 +4,13 @@ const Contact = () => {
   return (
     <>
       {" "}
-      <div className="arlo_tm_section" id="contact">
+      <div
+        style={{ backgroundColor: " #f6f7fd", paddingTop: "70px" }}
+        className={
+          isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
+        }
+        id="contact"
+      >
         <div className="container">
           <div className="arlo_tm_title_holder contact">
             <h3>Contact Me</h3>
@@ -13,7 +19,10 @@ const Contact = () => {
         <div className="arlo_tm_footer_contact_wrapper_all">
           <div className="arlo_tm_contact_wrap_all">
             <div className="container">
-              <div className="leftbox">
+              <div
+                style={{ margin: "24px 0", padding: "0" }}
+                className="leftbox"
+              >
                 <div
                   className={
                     isMobile
@@ -24,7 +33,7 @@ const Contact = () => {
                   <ul>
                     <li>
                       <p>
-                        <label>linkedin:</label>
+                        <label>Linkedin:</label>
                         <span>
                           <a
                             href="https://www.linkedin.com/in/%C4%91%E1%BA%A1t-kim-0b3b981aa/"

@@ -1,7 +1,9 @@
-import desktopLogo from "~/assets/img/logo/desktop-logo.png"
+import desktopLogo from "~/assets/img/logo/mobile_logo.png"
+import desktopLogo1 from "~/assets/img/logo/Vitejs-logo.svg"
 import { useState, useEffect } from "react"
 import { isMobile } from "react-device-detect"
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs"
+
 interface Props {
   showLeftPart: boolean
   setShowLeftPart: (value: boolean) => void
@@ -35,6 +37,7 @@ const LeftPart = (props: Props) => {
       }, 1000)
     }
   }
+
   return (
     <>
       <div
@@ -46,8 +49,17 @@ const LeftPart = (props: Props) => {
       >
         <div className="leftpart_inner">
           <div className="logo_wrap">
-            <a href="#">
-              <img src={desktopLogo} alt="desktop-logo" />
+            <a
+              onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
+                handleScrollTab("home", e)
+              }
+              href="#home"
+            >
+              <img
+                src={desktopLogo}
+                alt="desktop-logo"
+                style={{ width: "120px" }}
+              />
             </a>
           </div>
           <div className="menu_list_wrap">

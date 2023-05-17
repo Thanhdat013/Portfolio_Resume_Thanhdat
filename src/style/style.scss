@@ -15,7 +15,7 @@ $color_14: inherit;
 $font-family_1: "Open Sans";
 $font-family_2: "Montserrat";
 $background-color_1: #fff;
-$background-color_2: #041230;
+$background-color_2: #025464;
 $background-color_3: #e3872d;
 $background-color_4: rgba(7, 23, 55, 0.8);
 $background-color_5: #f6f7fd;
@@ -69,10 +69,10 @@ $border-bottom-color_1: #fff;
 }
 
 @keyframes showMenuMobile {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -209,8 +209,8 @@ img.svg {
   padding: 0;
 }
 .arlo_tm_section {
-  background-color: #f6f7fd;
-  padding-top: 100px;
+  // background-color: #f6f7fd;
+  // padding-top: 100px;
   width: 100%;
   height: auto;
   clear: both;
@@ -219,6 +219,13 @@ img.svg {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   // margin-bottom: 100px;
+  &.device-mobile:first-child,
+  &.device-mobile:last-child {
+    padding: 32px 0 0;
+  }
+  &.device-mobile {
+    padding: 32px 8px 0;
+  }
 }
 .arlo_tm_content {
   width: 100%;
@@ -324,7 +331,7 @@ placeholder {
   transition: all 0.3s ease;
   .logo_wrap {
     background-color: $background-color_2;
-    padding: 50px 20px;
+    padding: 24px 20px;
     width: 100%;
     float: left;
     text-align: center;
@@ -350,6 +357,29 @@ placeholder {
         margin: 0px;
         &:last-child {
           margin-bottom: 0px;
+          display: flex;
+          gap: 32px;
+        }
+
+        strong {
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 500;
+          color: $color_2;
+          font-family: $font-family_2;
+          position: relative;
+          &.languages-vi {
+            &::after {
+              position: absolute;
+              content: "";
+              height: 16px;
+              width: 2px;
+              background-color: $background-color_3;
+              top: 14px;
+              transform: translateY(-50%);
+              right: -75%;
+            }
+          }
         }
         a {
           text-decoration: none;
@@ -437,7 +467,7 @@ placeholder {
   .arlo_tm_resize {
     position: absolute;
     right: 0px;
-    bottom: 20%;
+    bottom: 50%;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -680,7 +710,7 @@ placeholder {
     box-sizing: border-box;
   }
   .overlay_image.hero {
-    background-image: url(~/assets/img/hero/2.jpg);
+    background-image: url(~/assets/img/hero/3.jpg);
   }
   .overlay_color.hero {
     background-color: $background-color_4;
@@ -717,6 +747,9 @@ placeholder {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  &.about-mobile {
+    padding-bottom: 32px;
+  }
   .author_wrap {
     width: 100%;
     height: auto;
@@ -773,12 +806,13 @@ placeholder {
     .rightbox {
       width: 65%;
       float: right;
-      padding: 0px 0px 0px 65px;
+      padding: 0px 0px 0px 48px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       &.about-mobile {
         width: 100%;
+        padding: 0 12px;
       }
     }
   }
@@ -823,7 +857,7 @@ placeholder {
         }
         a {
           text-decoration: none;
-          color: $color_5;
+          color: $color_11;
           position: relative;
           -webkit-transition: all 0.3s ease;
           -moz-transition: all 0.3s ease;
@@ -831,7 +865,7 @@ placeholder {
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
           &:hover {
-            color: $color_6;
+            color: $color_10;
           }
         }
       }
@@ -923,6 +957,9 @@ placeholder {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  &.project-mobile {
+    padding-bottom: 32px;
+  }
   &:before {
     position: absolute;
     content: "";
@@ -964,6 +1001,9 @@ placeholder {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 100px;
+  &.about-mobile {
+    padding-top: 120px;
+  }
 }
 .arlo_tm_main_title_holder {
   width: 100%;
@@ -1033,7 +1073,7 @@ placeholder {
         font-weight: 700;
         font-size: 13px;
         color: $color_5;
-        min-width: 85px;
+        min-width: 72px;
         display: inline-block;
       }
     }
@@ -1048,7 +1088,13 @@ placeholder {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: $background-color_5;
-  padding: 90px 0px;
+  padding: 36px 0px;
+  &.arlo_tm_skills_wrap:first-child {
+    padding-top: 100px;
+  }
+  &.skill-mobile {
+    padding: 16px 8px;
+  }
   .inner_wrap {
     width: 100%;
     height: auto;
@@ -1060,7 +1106,7 @@ placeholder {
     display: flex;
   }
   .leftbox {
-    width: 35%;
+    width: 100%;
     height: auto;
     clear: both;
     float: left;
@@ -1068,17 +1114,18 @@ placeholder {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding-right: 12px;
   }
-  .rightbox {
-    width: 65%;
-    height: auto;
-    clear: both;
-    float: right;
-    padding-left: 65px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+  // .rightbox {
+  //   width: 65%;
+  //   height: auto;
+  //   clear: both;
+  //   float: right;
+  //   padding-left: 65px;
+  //   -webkit-box-sizing: border-box;
+  //   -moz-box-sizing: border-box;
+  //   box-sizing: border-box;
+  // }
 }
 .progress_bar_wrap_total {
   width: 100%;
@@ -1245,12 +1292,13 @@ placeholder {
   clear: both;
   float: left;
   background-color: $background-color_1;
-  // margin-bottom: 70px;
   text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-top: 100px;
+  &.skill-mobile {
+    padding-top: 32px;
+  }
   .arlo_tm_title_holder_wrap {
     margin-bottom: 93px;
   }
@@ -1263,6 +1311,9 @@ placeholder {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin-bottom: 70px;
+    &.project-mobile {
+      margin-bottom: 24px;
+    }
     ul {
       margin: 0px 0px 0px -30px;
       list-style-type: none;
@@ -1996,7 +2047,7 @@ placeholder {
       &.contact-mobile {
         ul {
           li {
-            width: 100% !important;
+            width: 100%;
           }
         }
       }
@@ -2149,8 +2200,8 @@ placeholder {
   clear: both;
   float: left;
   text-align: center;
-  background-color: #19a7ce;
-  padding: 50px 0px;
+  background-color: $background-color_2;
+  padding: 24px 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2226,7 +2277,7 @@ placeholder {
 .arlo_tm_universal_box_wrap.particle {
   height: 100vh;
   position: relative;
-  background-image: url(..~/assets/img/hero/2.jpg);
+  background-image: url(..~/assets/img/hero/3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2245,7 +2296,7 @@ placeholder {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(..~/assets/img/hero/2.jpg);
+  background-image: url(..~/assets/img/hero/3.jpg);
   position: relative;
   .overlay {
     position: absolute;
@@ -2297,7 +2348,7 @@ placeholder {
       z-index: 20;
     }
     .overlay_image.top {
-      background-image: url(..~/assets/img/hero/2.jpg);
+      background-image: url(..~/assets/img/hero/3.jpg);
     }
     .overlay_color.top {
       background-color: $background-color_11;
@@ -2668,7 +2719,7 @@ placeholder {
     height: auto;
     clear: both;
     float: left;
-    padding: 16px 20px;
+    padding: 8px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2678,8 +2729,8 @@ placeholder {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     .logo {
-      width: 36px;
-      height: 30px;
+      width: 52px;
+      height: 50px;
     }
     .hamburger-inner {
       width: 36px;
@@ -2696,7 +2747,7 @@ placeholder {
   height: auto;
   clear: both;
   float: left;
-  background-color: $background-color_15;
+  background-color: $background-color_2;
   padding: 30px 20px;
   display: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
@@ -2815,7 +2866,7 @@ placeholder {
     .leftbox {
       padding-right: 0px;
       width: 100%;
-      margin-bottom: 60px;
+      margin-bottom: 24px;
     }
     .rightbox {
       width: 100%;

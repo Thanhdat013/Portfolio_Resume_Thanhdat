@@ -24,7 +24,12 @@ const MobileMenu = () => {
       <div className="arlo_tm_mobile_header_wrap">
         <div className="main_wrap">
           <div>
-            <a href="#home">
+            <a
+              onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+                handleScrollTab("home", e), setOpenMenuMobile(false)
+              }}
+              href="#home"
+            >
               <img src={logoMobile} alt="mobile_logo" className="logo" />
             </a>
           </div>
