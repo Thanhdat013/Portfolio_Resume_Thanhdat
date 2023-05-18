@@ -3,6 +3,7 @@ import desktopLogo1 from "~/assets/img/logo/Vitejs-logo.svg"
 import { useState, useEffect } from "react"
 import { isMobile } from "react-device-detect"
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs"
+import { useTranslation } from "react-i18next"
 
 interface Props {
   showLeftPart: boolean
@@ -38,6 +39,12 @@ const LeftPart = (props: Props) => {
     }
   }
 
+  // multiple languages
+  const { t, i18n } = useTranslation()
+
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language)
+  }
   return (
     <>
       <div
@@ -72,7 +79,7 @@ const LeftPart = (props: Props) => {
                   ) => handleScrollTab("home", e)}
                   href="#home"
                 >
-                  Home
+                  {t("leftPart.leftPartMenu1")}
                 </a>
               </li>
               <li>
@@ -83,7 +90,7 @@ const LeftPart = (props: Props) => {
                   ) => handleScrollTab("about", e)}
                   href="#about"
                 >
-                  About
+                  {t("leftPart.leftPartMenu2")}
                 </a>
               </li>
               <li>
@@ -94,7 +101,7 @@ const LeftPart = (props: Props) => {
                   ) => handleScrollTab("skills", e)}
                   href="#skills"
                 >
-                  Skill
+                  {t("leftPart.leftPartMenu3")}
                 </a>
               </li>
               <li>
@@ -105,7 +112,7 @@ const LeftPart = (props: Props) => {
                   ) => handleScrollTab("project", e)}
                   href="#project"
                 >
-                  Project
+                  {t("leftPart.leftPartMenu4")}
                 </a>
               </li>
               <li>
@@ -116,8 +123,26 @@ const LeftPart = (props: Props) => {
                   ) => handleScrollTab("contact", e)}
                   href="#contact"
                 >
-                  Contact
+                  {t("leftPart.leftPartMenu5")}
                 </a>
+              </li>
+              <li>
+                <strong
+                  onClick={() => changeLanguage("vi")}
+                  className={
+                    i18n.language === "vi"
+                      ? "languages-active languages-vi"
+                      : "languages-vi"
+                  }
+                >
+                  Vi
+                </strong>
+                <strong
+                  className={i18n.language === "en" ? "languages-active" : ""}
+                  onClick={() => changeLanguage("en")}
+                >
+                  En
+                </strong>
               </li>
             </ul>
           </div>

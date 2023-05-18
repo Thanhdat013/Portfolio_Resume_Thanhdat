@@ -157,7 +157,7 @@ const Project = () => {
           title={
             dataDetail && dataDetail.title ? `Dự án ${dataDetail.title}` : ""
           }
-          width={isMobile ? "70vw" : "32vw"}
+          width={isMobile ? "70vw" : "40vw"}
           open={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}

@@ -368,6 +368,9 @@ placeholder {
           color: $color_2;
           font-family: $font-family_2;
           position: relative;
+          &.languages-active {
+            color: #e3872d;
+          }
           &.languages-vi {
             &::after {
               position: absolute;
@@ -377,7 +380,7 @@ placeholder {
               background-color: $background-color_3;
               top: 14px;
               transform: translateY(-50%);
-              right: -75%;
+              right: -100%;
             }
           }
         }
@@ -558,13 +561,14 @@ placeholder {
     box-sizing: border-box;
   }
   .image_wrap {
-    width: 200px;
-    height: 200px;
     display: inline-block;
     margin-bottom: 38px;
     img {
-      border-radius: 100%;
+      border-radius: 50%;
       border: 8px solid rgba(255, 255, 255, 0.5);
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
     }
   }
   .name_holder {
@@ -850,10 +854,13 @@ placeholder {
       list-style-type: none;
       li {
         margin: 0px 0px 10px 0px;
-        width: 50%;
+        width: 100%;
         float: left;
         &:nth-of-type(2n) {
           clear: right;
+        }
+        label {
+          min-width: 78px;
         }
         a {
           text-decoration: none;
@@ -2064,6 +2071,8 @@ placeholder {
             font-weight: 700;
             font-size: 16px;
             color: $color_5;
+            display: inline-block;
+            width: 92px;
           }
           span {
             padding-left: 5px;

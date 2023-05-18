@@ -1,6 +1,8 @@
 import { isMobile } from "react-device-detect"
 import { TypeAnimation } from "react-type-animation"
 import avatar from "~/assets/img/hero/avatar.jpg"
+import avatarAuth from "~/assets/img/hero/auth.jpg"
+import { useTranslation } from "react-i18next"
 const HomeCv = () => {
   const handleScrollToAbout = () => {
     const section = document.querySelector("#about")
@@ -8,6 +10,7 @@ const HomeCv = () => {
       section.scrollIntoView({ behavior: "smooth", block: "start" })
     }
   }
+  const { t } = useTranslation()
   return (
     <>
       {" "}
@@ -33,12 +36,13 @@ const HomeCv = () => {
                 </div>
                 <div className="name_holder">
                   <h3>
-                    Thanh <span>Dat</span>
+                    {t("home.firstName")} &nbsp;
+                    <span>{t("home.lastName")}</span>
                   </h3>
                 </div>
                 <div className="text_typing">
                   <p>
-                    I'm a &nbsp;
+                    {t("home.intro")} &nbsp;
                     <TypeAnimation
                       sequence={[
                         "Front-end developer",

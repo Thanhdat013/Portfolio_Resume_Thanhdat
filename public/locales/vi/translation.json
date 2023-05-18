@@ -1,0 +1,14 @@
+{
+  "leftPart": {
+    "leftPartMenu1": "Trang chủ ",
+    "leftPartMenu2": "Về tôi",
+    "leftPartMenu3": "kỹ năng",
+    "leftPartMenu4": "Dự án",
+    "leftPartMenu5": "Liên hệ"
+  },
+  "home": {
+    "firstName": "Thành",
+    "lastName": "Đạt",
+    "intro": "Mình là một"
+  }
+}

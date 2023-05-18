@@ -2,24 +2,27 @@ import { TypeAnimation } from "react-type-animation"
 import { useRef, useEffect } from "react"
 import portrait from "~/assets/img/about/1.jpg"
 import bgi from "~/assets/img/about/550x640.jpg"
+import avatarAuth from "~/assets/img/hero/auth.jpg"
+
 import myCv from "~/assets/cv/v1.0-Detail-Debugging.pdf"
 import Parallax from "parallax-js"
 import { isMobile } from "react-device-detect"
+import { useTranslation } from "react-i18next"
 const About = () => {
   const sceneEl = useRef(null)
 
-  useEffect(() => {
-    if (sceneEl && sceneEl.current) {
-      const parallaxInstance = new Parallax(sceneEl.current, {
-        relativeInput: true,
-        hoverOnly: true,
-      })
-      parallaxInstance.enable()
-      return () => parallaxInstance.disable()
-    }
-  }, [])
-  ;<div ref={sceneEl}>{/* html */}</div>
+  // useEffect(() => {
+  //   if (sceneEl && sceneEl.current) {
+  //     const parallaxInstance = new Parallax(sceneEl.current, {
+  //       relativeInput: true,
+  //       hoverOnly: true,
+  //     })
+  //     parallaxInstance.enable()
+  //     return () => parallaxInstance.disable()
+  //   }
+  // }, [])
 
+  const { t } = useTranslation()
   return (
     <>
       <div
@@ -39,9 +42,12 @@ const About = () => {
           }
         >
           <div className="container">
-            <div className="arlo_tm_title_holder">
-              <h3>About Me</h3>
-              <span>Main information about me</span>
+            <div
+              className="arlo_tm_title_holder"
+              style={{ paddingBottom: "24px" }}
+            >
+              <h3>{t("about.heading")}</h3>
+              <span>{t("about.title")}</span>
             </div>
             <div
               className={
@@ -76,7 +82,7 @@ const About = () => {
                 >
                   <div className="arlo_tm_mini_title_holder">
                     <h4>
-                      Hi there...I'm a &nbsp;
+                      {t("about.desc")} &nbsp;
                       <TypeAnimation
                         sequence={[
                           "Intern Front-end",
@@ -96,38 +102,45 @@ const About = () => {
                   </div>
                   <div className="definition">
                     <p>
-                      Hi, my name is <strong>Thanh Dat</strong>. I was
-                      originally a refrigeration engineer from University of
-                      Science and Technology, but I have a passion for
-                      programming so I want to pursue the path that I love.
+                      {t("about.intro1")}{" "}
+                      <strong> {t("about.subIntro1")}</strong>
+                      {t("about.intro1-1")}
                     </p>
+                    <br />
+                    <p>{t("about.intro2")}</p>
+                    <br />
+                    <p>{t("about.intro3")}</p>
+                    <br />
+                    <p>{t("about.intro4")}</p>
                   </div>
                   <div className="about_short_contact_wrap">
                     <ul>
                       <li>
                         <span>
-                          <label>Birthday:</label> 24.05.1997
+                          <label>{t("about.birthday")}</label>
+                          <span>{t("about.myBirthday")}</span>
                         </span>
                       </li>
                       <li>
                         <span>
-                          <label>Gender</label> Male
+                          <label>{t("about.myBirthday")} </label>
+                          <span>{t("about.myBirthday")}</span>
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          <label>Email:</label>
+                          <label>{t("about.email")} </label>
                           <a href="mailto:kimthanhdat0510@gmail.com">
-                            kimthanhdat0510&#64;gmail.com
+                            {t("about.myEmail")}
                           </a>
                         </span>
                       </li>
                       <li>
                         <span>
-                          <label>Git hub:</label>
+                          <label>{t("about.github")}</label>
                           <a href="https://github.com/Thanhdat013">
-                            github.com/Thanhdat013
+                            {t("about.myGithub")}
                           </a>
                         </span>
                       </li>
@@ -137,7 +150,7 @@ const About = () => {
                     <ul>
                       <li>
                         <a href={myCv} download>
-                          <span>Download CV</span>
+                          <span> {t("about.download")}</span>
                         </a>
                       </li>
                     </ul>
