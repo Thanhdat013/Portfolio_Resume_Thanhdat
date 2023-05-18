@@ -1,6 +1,7 @@
 import { useState } from "react"
 import logoMobile from "~/assets/img/logo/mobile_logo.png"
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx"
+import { useTranslation } from "react-i18next"
 const MobileMenu = () => {
   const [activeTab, setActiveTab] = useState<string>("home")
   const handleScrollTab = (
@@ -18,7 +19,12 @@ const MobileMenu = () => {
     }
   }
   const [openMenuMobile, setOpenMenuMobile] = useState<boolean>(false)
+  // multiple languages
+  const { t, i18n } = useTranslation()
 
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language)
+  }
   return (
     <>
       <div className="arlo_tm_mobile_header_wrap">
@@ -70,7 +76,7 @@ const MobileMenu = () => {
                   }}
                   href="#home"
                 >
-                  Home
+                  {t("leftPart.leftPartMenu1")}
                 </a>
               </li>
               <li>
@@ -83,7 +89,7 @@ const MobileMenu = () => {
                   }}
                   href="#about"
                 >
-                  About
+                  {t("leftPart.leftPartMenu2")}
                 </a>
               </li>
               <li>
@@ -96,7 +102,7 @@ const MobileMenu = () => {
                   }}
                   href="#skills"
                 >
-                  Skill
+                  {t("leftPart.leftPartMenu3")}
                 </a>
               </li>
               <li>
@@ -109,7 +115,7 @@ const MobileMenu = () => {
                   }}
                   href="#project"
                 >
-                  Project
+                  {t("leftPart.leftPartMenu4")}
                 </a>
               </li>
               <li>
@@ -122,8 +128,26 @@ const MobileMenu = () => {
                   }}
                   href="#contact"
                 >
-                  Contact
+                  {t("leftPart.leftPartMenu5")}
                 </a>
+              </li>
+              <li>
+                <strong
+                  onClick={() => changeLanguage("vi")}
+                  className={
+                    i18n.language === "vi"
+                      ? "languages-active languages-vi"
+                      : "languages-vi"
+                  }
+                >
+                  Vi
+                </strong>
+                <strong
+                  className={i18n.language === "en" ? "languages-active" : ""}
+                  onClick={() => changeLanguage("en")}
+                >
+                  En
+                </strong>
               </li>
             </ul>
           </div>

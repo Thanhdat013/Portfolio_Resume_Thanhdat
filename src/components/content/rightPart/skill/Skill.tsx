@@ -6,9 +6,11 @@ const Skill = () => {
     <>
       {" "}
       <div
-        style={{ backgroundColor: "#f6f7fd", height: "100vh" }}
+        style={{ backgroundColor: "#f6f7fd" }}
         className={
-          isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
+          isMobile
+            ? "arlo_tm_section device-mobile"
+            : "arlo_tm_section device-pc"
         }
         id="skills"
       >
@@ -20,7 +22,13 @@ const Skill = () => {
           }
         >
           <div className="container">
-            <div className="arlo_tm_title_holder">
+            <div
+              className={
+                isMobile
+                  ? "arlo_tm_title_holder skill-mobile"
+                  : "arlo_tm_title_holder"
+              }
+            >
               <h3>{t("skill.heading")}</h3>
               <span>{t("skill.title")}</span>
             </div>
@@ -76,7 +84,6 @@ const Skill = () => {
                   <li>{t("skill.softSkill-1")}</li>
                   <li>{t("skill.softSkill-2")}</li>
                   <li>{t("skill.softSkill-3")}.</li>
-                  <li>{t("skill.softSkill-4")}</li>
                   <li>{t("skill.softSkill-5")}</li>
                 </div>
               </div>

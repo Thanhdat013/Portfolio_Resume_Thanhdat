@@ -211,6 +211,7 @@ img.svg {
 .arlo_tm_section {
   // background-color: #f6f7fd;
   // padding-top: 100px;
+  padding-top: 60px;
   width: 100%;
   height: auto;
   clear: both;
@@ -224,7 +225,11 @@ img.svg {
     padding: 32px 0 0;
   }
   &.device-mobile {
-    padding: 32px 8px 0;
+    padding: 12px 8px 0;
+    height: auto;
+  }
+  &.device-pc {
+    height: 100vh;
   }
 }
 .arlo_tm_content {
@@ -817,7 +822,7 @@ placeholder {
       box-sizing: border-box;
       &.about-mobile {
         width: 100%;
-        padding: 0 12px;
+        padding: 0;
       }
     }
   }
@@ -861,7 +866,7 @@ placeholder {
           clear: right;
         }
         label {
-          min-width: 78px;
+          min-width: 90px;
         }
         a {
           text-decoration: none;
@@ -965,14 +970,15 @@ placeholder {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  &.project-mobile {
+  &.project-mobile,
+  &.skill-mobile {
     padding-bottom: 32px;
   }
   &:before {
     position: absolute;
     content: "";
     width: 6px;
-    height: 48px;
+    height: 72px;
     background-color: $background-color_3;
     top: 2px;
   }
@@ -991,7 +997,7 @@ placeholder {
   }
 }
 .arlo_tm_title_holder.contact {
-  padding-bottom: 36px;
+  padding-bottom: 4px;
 }
 .arlo_tm_about_wrapper_all {
   width: 100%;
@@ -1010,7 +1016,7 @@ placeholder {
   box-sizing: border-box;
   padding-top: 100px;
   &.about-mobile {
-    padding-top: 120px;
+    padding-top: 24px;
   }
 }
 .arlo_tm_main_title_holder {
@@ -1099,6 +1105,9 @@ placeholder {
   padding: 36px 0px;
   &.arlo_tm_skills_wrap:first-child {
     padding-top: 100px;
+    &.skill-mobile {
+      padding-top: 24px;
+    }
   }
   &.skill-mobile {
     padding: 16px 8px;
@@ -2081,7 +2090,7 @@ placeholder {
             font-size: 16px;
             color: $color_5;
             display: inline-block;
-            width: 92px;
+            width: 108px;
           }
           span {
             padding-left: 5px;
@@ -2310,7 +2319,8 @@ placeholder {
 }
 .arlo_tm_ripple_wrap {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  // height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2794,6 +2804,31 @@ placeholder {
         &:last-child {
           margin-bottom: 0px;
         }
+        strong {
+          cursor: pointer;
+          font-size: 19px;
+          font-weight: 500;
+          color: $color_2;
+          font-family: $font-family_2;
+          position: relative;
+          &.languages-active {
+            color: #e3872d;
+          }
+
+          &.languages-vi {
+            margin-right: 14px;
+            &::after {
+              position: absolute;
+              content: "";
+              height: 16px;
+              width: 2px;
+              background-color: $background-color_3;
+              top: 50%;
+              transform: translateY(-50%);
+              right: -45%;
+            }
+          }
+        }
         a {
           text-decoration: none;
           color: $color_2;
@@ -2932,7 +2967,8 @@ placeholder {
   }
   .arlo_tm_title_holder {
     h3 {
-      font-size: 45px;
+      font-size: 30px;
+      margin-bottom: 12px;
     }
   }
   .arlo_tm_services_wrap {

@@ -7,7 +7,7 @@ const Contact = () => {
     <>
       {" "}
       <div
-        style={{ backgroundColor: " #f6f7fd", paddingTop: "70px" }}
+        style={{ backgroundColor: " #f6f7fd" }}
         className={
           isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
         }
@@ -16,6 +16,7 @@ const Contact = () => {
         <div className="container">
           <div className="arlo_tm_title_holder contact">
             <h3>{t("contact.heading")}</h3>
+            <span>{t("contact.title")}</span>
           </div>
         </div>
         <div className="arlo_tm_footer_contact_wrapper_all">

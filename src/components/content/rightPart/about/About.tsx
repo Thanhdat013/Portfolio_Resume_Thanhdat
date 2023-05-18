@@ -26,7 +26,7 @@ const About = () => {
   return (
     <>
       <div
-        style={{ height: "100vh" }}
+        // style={{ height: "100vh" }}
         className={
           isMobile
             ? "arlo_tm_section device-mobile relative"
@@ -117,14 +117,20 @@ const About = () => {
                     <ul>
                       <li>
                         <span>
+                          <label>{t("about.name")}</label>
+                          <span>{t("about.myName")}</span>
+                        </span>
+                      </li>
+                      <li>
+                        <span>
                           <label>{t("about.birthday")}</label>
                           <span>{t("about.myBirthday")}</span>
                         </span>
                       </li>
                       <li>
                         <span>
-                          <label>{t("about.myBirthday")} </label>
-                          <span>{t("about.myBirthday")}</span>
+                          <label>{t("about.gender")} </label>
+                          <span>{t("about.myGender")}</span>
                         </span>
                       </li>
 

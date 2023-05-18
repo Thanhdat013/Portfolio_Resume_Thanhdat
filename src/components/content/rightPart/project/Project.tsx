@@ -94,7 +94,6 @@ const Project = () => {
     <>
       {" "}
       <div
-        style={{ paddingTop: "50px" }}
         className={
           isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
         }

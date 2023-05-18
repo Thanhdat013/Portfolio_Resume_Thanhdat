@@ -1,14 +1,117 @@
 {
   "leftPart": {
     "leftPartMenu1": "Trang chủ ",
-    "leftPartMenu2": "Về tôi",
-    "leftPartMenu3": "kỹ năng",
+    "leftPartMenu2": "Về mình",
+    "leftPartMenu3": "Kỹ năng",
     "leftPartMenu4": "Dự án",
-    "leftPartMenu5": "Liên hệ"
+    "leftPartMenu5": "Liên hê"
   },
   "home": {
     "firstName": "Thành",
     "lastName": "Đạt",
-    "intro": "Mình là một"
+    "intro": "Mình là"
+  },
+  "about": {
+    "heading": "Về mình",
+    "title": "Các thông tin chính về mình",
+    "desc": "Chào mọi người...Mình là ",
+    "intro-1": "Xin chào, mình tên là",
+    "subIntro-1": "Thành Đạt",
+    "intro1-1": ". Mình vốn là một kỹ sư điện lạnh của trường Đại học Bách khoa, nhưng mình có niềm đam mê lập trình nên mình muốn theo đuổi con đường mà mình yêu thích.",
+    "intro-2": "Mình được biết đến như một nhân viên giao tiếp tốt và định hướng chi tiết. Mình không bao giờ trễ deadline và có thể đảm nhận nhiều nhiệm vụ cùng một lúc. Mình có khả năng làm việc độc lập cũng như làm việc nhóm hiệu quả. Sở thích của mình là đọc sách, viết code, chơi bóng đá và nghe nhạc. Đôi khi mình thích ra ngoài uống rượu với đồng nghiệp của mình ^^.",
+    "intro-3": "Hiện tại, mình không có nhiều kinh nghiệm, vì vậy mình muốn ứng tuyển vào vị trí Intern/Fresher Frontend mới hơn để khám phá các khía cạnh mới và để phát triển hơn nữa các kỹ năng của mình. Mục tiêu ngắn hạn của mình là mình muốn trở thành một phần của nhóm Frontend, để xây dựng các sản phẩm có thể thể hiện kỹ năng của mình, phát triển sự nghiệp và mục tiêu dài hạn của mình  là trở thành Senior Frontend cấp cao.",
+    "intro-4": "Đó là phần giới thiệu của tôi. Cảm ơn vì đã đọc.",
+    "name": "Họ và tên:",
+    "myName": "Kim Thành Đạt",
+    "birthday": "Ngày sinh:",
+    "myBirthday": "24.05.1997",
+    "gender": "Giới tính:",
+    "myGender": "Nam",
+    "email": "Email:",
+    "myEmail": "kimthanhdat0510@gmail.com",
+    "github": "Github:",
+    "myGithub": "github.com/Thanhdat013",
+    "download": "Tải CV"
+  },
+  "skill": {
+    "heading": "Kỹ năng của tôi",
+    "title": "Tất cả các kỹ năng của tối",
+    "frontendSkill": "Các kỹ năng Front-end",
+    "frontendSkill-1": "Có khả năng thiết kế và phát triển web responsive theo mẫu.",
+    "frontendSkill-2": "Thành thạo HTML, CSS (SCSS).",
+    "frontendSkill-3": "Ngôn ngữ lập trình: Javascript, Typescript.",
+    "frontendSkill-4": " Framework/Library: React.js, Next.js,Bootstrap,Tailwind, Antd.",
+    "backendSkill": "Kỹ năng Back-end ",
+    "backendSkill-1": "Có hiểu biết về Docker, mySql, RESTful APIs.",
+    "otherSkill": "Các kỹ năng khác",
+    "otherSkill-1": "Sử dụng thành thạo công cụ quản lý mã nguồn: GIT.",
+    "otherSkill-2": "Khả năng học hỏi và áp dụng công nghệ mới.",
+    "otherSkill-3": "Có tư duy về UX và UI với sản phẩm.",
+    "otherSkill-4": "Có khả năng đọc hiểu tài liệu tiếng Anh chuyên ngành.",
+    "softSkill": "Các kỹ năng mềm",
+    "softSkill-1": "Kỹ năng giao tiếp tốt.",
+    "softSkill-2": "Khả năng làm việc nhóm & độc lập.",
+    "softSkill-3": "Kỹ năng tin học văn phòng: word, excel, power point...",
+    "softSkill-5": "Kỹ năng quản lý thời gian tốt và khả năng sắp xếp thứ tự ưu tiên cho các nhiệm vụ.."
+  },
+  "project": {
+    "heading": "Dự án của tôi",
+    "title": "Các dự án đã hoàn thành",
+    "seeMore": "Xem thêm",
+    "name": "Dự án:",
+    "desc": "Miêu tả:",
+    "frontend": "Frontend:",
+    "backend": "Backend:",
+    "member": "Số lượng thành viên:",
+    "role": "Vai trò:",
+    "demo": "Demo:",
+    "github": "Github: ",
+    "myGithub": "https://github.com/Thanhdat013"
+  },
+  "detailProject": {
+    "project-1": {
+      "title": "Trang web bán sách online.",
+      "shortDescription": "Website thương mại điện tử hỗ trợ người dùng mua sách trên trang web và điện thoại.",
+      "description": "Xây dựng website thương mại điện tử bán sách trực tuyến, nơi người dùng có thể dễ dàng truy cập, tìm kiếm và mua những cuốn sách mình mong muốn.",
+      "frontend": "React.Js, Redux Toolkit, Ant Design, SCSS.",
+      "backend": "Node.js, MongDB.",
+      "role": "Nhà phát triển.",
+      "demo": "https://reactjs-frontend.thanhdat-tiki.click/",
+      "github": "https://github.com/Thanhdat013/Clone_Tiki"
+    },
+    "project-2": {
+      "title": "Danh mục cá nhân đơn giản.",
+      "shortDescription": "Một danh mục cá nhân đơn giản để giới thiệu bản thân.",
+      "description": "Xây dựng một danh mục cá nhân đơn giản để giới thiệu bản thân với thông tin cá nhân, các dự án đã thực hiện và các bài đăng trên blog.",
+      "frontend": "Next.Js (TypeScript), Material UI v5.",
+      "backend": "RESTful API. ",
+      "role": "Nhà phát triển.",
+      "demo": "https://nextjs-basic-kappa-eight.vercel.app/",
+      "github": "https://github.com/Thanhdat013/Nextjs-basic"
+    },
+    "project-3": {
+      "title": "Trang web cho các câu đố.",
+      "shortDescription": "A website that makes quizzes with many different topics.",
+      "description": "Xây dựng một trang web cho các câu đố đánh giá, nơi người dùng có thể dễ dàng truy cập và lựa chọn từ các chủ đề khác nhau.",
+      "frontend": "React.Js (Javascript), Redux, Bootstrap.",
+      "backend": "Node.js, Docker.",
+      "role": "Nhà phát triển.",
+      "demo": "",
+      "github": "https://github.com/Thanhdat013/React_Quiz-test"
+    }
+  },
+
+  "contact": {
+    "heading": "Liên hệ ",
+    "title": "Liên hệ với tôi",
+    "linkedin": "Linkedin:",
+    "myLinkedin": "www.linkedin.com/in/Thanhdat",
+    "email": "Thư điện tử:",
+    "myEmail": "kimthanhdat0510@gmail.com",
+    "phone": "Điện thoại:",
+    "myPhone": "+84 338 575 296",
+    "github": "Github:",
+    "myGithub": "github.com/Thanhdat013",
+    "footer": "© Bản quyền 2023. Mọi quyền được bảo lưu."
   }
 }
