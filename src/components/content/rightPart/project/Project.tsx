@@ -6,6 +6,7 @@ import { FaReact } from "react-icons/fa"
 import { MdOutlineQuiz } from "react-icons/md"
 import { SiNextdotjs } from "react-icons/si"
 import { BsArrowRight } from "react-icons/bs"
+import { useTranslation } from "react-i18next"
 
 interface DataDetail {
   image: JSX.Element
@@ -23,6 +24,7 @@ interface DataDetail {
 }
 
 const Project = () => {
+  const { t } = useTranslation()
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [dataDetail, setDataDetail] = useState<DataDetail | null>(null)
 
@@ -45,47 +47,45 @@ const Project = () => {
   const dataProject: DataDetail[] = [
     {
       image: <FaReact size={50} color={"#2bebfd"} />,
-      shortDescription:
-        "Website thương mại điện tử  hỗ trợ và quản lý mua bán sách",
-      title: "Website clone Tiki",
+      shortDescription: t("detailProject.project-1.shortDescription"),
+
+      title: t("detailProject.project-1.title"),
       detail: {
-        description:
-          "Xây dựng clone Website thương mại điện tử hỗ trợ và quản lý mua bán sách Tiki ",
-        Frontend: "React.Js, Redux Toolkit, Ant Design",
-        Backend: "Node.js, MongDB",
-        role: "Development",
+        description: t("detailProject.project-1.description"),
+        Frontend: t("detailProject.project-1.frontend"),
+        Backend: t("detailProject.project-1.backend"),
+        role: t("detailProject.project-1.role"),
         member: 1,
-        demo: "",
-        github: "https://github.com/Thanhdat013/Clone_Tiki",
+        demo: t("detailProject.project-1.demo"),
+        github: t("detailProject.project-1.github"),
       },
     },
     {
       image: <SiNextdotjs size={50} color={"#20262E"} />,
-      shortDescription: "Một Blog đơn giản với mã nguồn mở GithubGql",
-      title: "trang cv basic",
+      shortDescription: t("detailProject.project-2.shortDescription"),
+      title: t("detailProject.project-2.title"),
       detail: {
-        description: "",
-        Frontend: "Next.Js (TypeScript), Material UI v5",
-        Backend: "Json",
-        role: "Development",
+        description: t("detailProject.project-2.description"),
+        Frontend: t("detailProject.project-2.frontend"),
+        Backend: t("detailProject.project-2.backend"),
+        role: t("detailProject.project-2.role"),
         member: 1,
-        demo: "",
-        github:
-          "https://github.com/Thanhdat013/Nextjs-basic-blog_with_Github_GraphQL",
+        demo: t("detailProject.project-2.demo"),
+        github: t("detailProject.project-2.github"),
       },
     },
     {
       image: <MdOutlineQuiz size={50} color={"#7cb305"} />,
-      shortDescription: "Website làm các bài quiz với nhiều chủ đề khác nhau",
-      title: "Website test quiz",
+      shortDescription: t("detailProject.project-3.shortDescription"),
+      title: t("detailProject.project-3.title"),
       detail: {
-        description: "",
-        Frontend: "React.Js (Javascript), Redux, Bootstrap",
-        Backend: "Node.js, Docker",
-        role: "Development",
+        description: t("detailProject.project-3.description"),
+        Frontend: t("detailProject.project-3.frontend"),
+        Backend: t("detailProject.project-3.backend"),
+        role: t("detailProject.project-3.role"),
         member: 1,
-        demo: "",
-        github: "https://github.com/Thanhdat013",
+        demo: t("detailProject.project-3.demo"),
+        github: t("detailProject.project-3.github"),
       },
     },
   ]
@@ -115,8 +115,8 @@ const Project = () => {
                   : "arlo_tm_title_holder"
               }
             >
-              <h3>My Project</h3>
-              <span>Project done</span>
+              <h3>{t("project.heading")}</h3>
+              <span>{t("project.title")}</span>
             </div>
             <div
               className={isMobile ? "list_wrap project-mobile" : "list_wrap"}
@@ -141,7 +141,7 @@ const Project = () => {
                         }}
                       >
                         <BsArrowRight />
-                        <p>See more</p>
+                        <p>{t("project.seeMore")}</p>
                       </div>
                     </div>
                   </li>
@@ -155,7 +155,9 @@ const Project = () => {
       <>
         <Modal
           title={
-            dataDetail && dataDetail.title ? `Dự án ${dataDetail.title}` : ""
+            dataDetail && dataDetail.title
+              ? `${t("project.name")} ${dataDetail.title}`
+              : ""
           }
           width={isMobile ? "70vw" : "40vw"}
           open={isModalOpen}
@@ -166,19 +168,21 @@ const Project = () => {
         >
           {dataDetail && (
             <ul style={{ listStyle: "none" }}>
-              <li>{`Miêu tả: ${dataDetail.title}`}</li>
-              <li>{`Frontend: ${dataDetail.detail.Frontend} `}</li>
-              <li>{`Backend: ${dataDetail.detail.Backend} `}</li>
-              <li>{`Số lượng thành viên dự án: ${dataDetail.detail.member}`}</li>
-              <li>{`Vai trò: ${dataDetail.detail.role}`}</li>
+              <li>{`${t("project.desc")} ${dataDetail.detail.description}`}</li>
+              <li>{`${t("project.frontend")} ${
+                dataDetail.detail.Frontend
+              } `}</li>
+              <li>{`${t("project.backend")} ${dataDetail.detail.Backend}`}</li>
+              <li>{`${t("project.member")} ${dataDetail.detail.member}`}</li>
+              <li>{`${t("project.role")} ${dataDetail.detail.role}`}</li>
               <li>
-                Demo:{" "}
+                {t("project.demo")}
                 <a target="_blank" rel="noreferrer noopener">
                   {dataDetail.detail.demo}
                 </a>
               </li>
               <li>
-                Github:{" "}
+                {t("project.github")}
                 <a
                   href="https://github.com/Thanhdat013/Clone_Tiki"
                   target="_blank"

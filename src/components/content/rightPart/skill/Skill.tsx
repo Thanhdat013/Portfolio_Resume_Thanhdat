@@ -1,6 +1,7 @@
-import ProgressBar from "@ramonak/react-progress-bar"
 import { isMobile } from "react-device-detect"
+import { useTranslation } from "react-i18next"
 const Skill = () => {
+  const { t } = useTranslation()
   return (
     <>
       {" "}
@@ -20,36 +21,27 @@ const Skill = () => {
         >
           <div className="container">
             <div className="arlo_tm_title_holder">
-              <h3>My Skill</h3>
-              <span>Main information about me</span>
+              <h3>{t("skill.heading")}</h3>
+              <span>{t("skill.title")}</span>
             </div>
             <div className="inner_wrap">
               <div className="leftbox">
                 <div className="arlo_tm_mini_title_holder">
-                  <h4>Front-end skills</h4>
+                  <h4>{t("skill.frontendSkill")}</h4>
                 </div>
                 <div>
-                  <li>
-                    Ability responsive web design and development follow
-                    template.
-                  </li>
-                  <li>Proficiency in HTML, CSS(SCSS)</li>
-                  <li>Programming language: Javascript, Typescript</li>
-                  <li>
-                    Framework/Library: React.js, Next.js,Bootstrap, Tailwind,
-                    Antd
-                  </li>
+                  <li>{t("skill.frontendSkill-1")}</li>
+                  <li>{t("skill.frontendSkill-2")}</li>
+                  <li>{t("skill.frontendSkill-3")}</li>
+                  <li>{t("skill.frontendSkill-4")}</li>
                 </div>
               </div>
               <div className="leftbox">
                 <div className="arlo_tm_mini_title_holder">
-                  <h4>Back-end skills</h4>
+                  <h4>{t("skill.backendSkill")}</h4>
                 </div>
                 <div>
-                  <li>
-                    {" "}
-                    Thorough under standing of Docker, mySql, RESTful APIs
-                  </li>
+                  <li>{t("skill.backendSkill-1")}</li>
                 </div>
               </div>
             </div>
@@ -67,55 +59,30 @@ const Skill = () => {
             <div className="inner_wrap">
               <div className="leftbox">
                 <div className="arlo_tm_mini_title_holder">
-                  <h4>Other skills</h4>
+                  <h4>{t("skill.otherSkill")}</h4>
                 </div>
                 <div>
-                  <li>Proficient use of source code management tools: GIT</li>
-                  <li>Ability to learn and apply new technology</li>
-                  <li>Assessed UX and UI designs for technical feasibility.</li>
+                  <li>{t("skill.otherSkill-1")}</li>
+                  <li>{t("skill.otherSkill-2")}</li>
+                  <li>{t("skill.otherSkill-3")}</li>
+                  <li>{t("skill.otherSkill-4")}</li>
                 </div>
               </div>
               <div className="leftbox">
                 <div className="arlo_tm_mini_title_holder">
-                  <h4>Soft Skills</h4>
+                  <h4>{t("skill.softSkill")}</h4>
                 </div>
                 <div>
-                  <li>Communication Skills</li>
-                  <li>Teamwork & Collaboration Abilities</li>
-                  <li>Computer Skills: word, excel, power point...</li>
-                  <li>Ability to work independently and as part of a team.</li>
-                  <li>
-                    {" "}
-                    Strong time management skills and ability to prioritize
-                    tasks.
-                  </li>
+                  <li>{t("skill.softSkill-1")}</li>
+                  <li>{t("skill.softSkill-2")}</li>
+                  <li>{t("skill.softSkill-3")}.</li>
+                  <li>{t("skill.softSkill-4")}</li>
+                  <li>{t("skill.softSkill-5")}</li>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* 
-        <div
-          className={
-            isMobile
-              ? "arlo_tm_skills_wrap skill-mobile"
-              : "arlo_tm_skills_wrap"
-          }
-        >
-          <div className="container">
-            <div className="inner_wrap">
-              <div className="leftbox">
-                <div className="arlo_tm_mini_title_holder">
-                  <h4>Other skills</h4>
-                </div>
-                <div>
-                  <li>Kỹ năng về sử dụng Git</li>
-                  <li>Framework/Library: Node.js</li>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </>
   )

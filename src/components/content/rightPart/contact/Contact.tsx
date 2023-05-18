@@ -1,6 +1,8 @@
 import { isMobile } from "react-device-detect"
+import { useTranslation } from "react-i18next"
 
 const Contact = () => {
+  const { t } = useTranslation()
   return (
     <>
       {" "}
@@ -13,7 +15,7 @@ const Contact = () => {
       >
         <div className="container">
           <div className="arlo_tm_title_holder contact">
-            <h3>Contact Me</h3>
+            <h3>{t("contact.heading")}</h3>
           </div>
         </div>
         <div className="arlo_tm_footer_contact_wrapper_all">
@@ -33,48 +35,48 @@ const Contact = () => {
                   <ul>
                     <li>
                       <p>
-                        <label>Linkedin:</label>
+                        <label>{t("contact.linkedin")}</label>
                         <span>
                           <a
                             href="https://www.linkedin.com/in/%C4%91%E1%BA%A1t-kim-0b3b981aa/"
                             target="_blank"
                             rel="noopener"
                           >
-                            https://www.linkedin.com/in/Thanhdat
+                            {t("contact.myLinkedin")}
                           </a>
                         </span>
                       </p>
                     </li>
                     <li>
                       <p>
-                        <label>Email:</label>
+                        <label>{t("contact.email")}</label>
                         <span>
                           <a
                             href="mailto: kimthanhdat0510@gmail.com@gmail.com"
                             target="_blank"
                             rel="noopener"
                           >
-                            kimthanhdat0510@gmail.com
+                            {t("contact.myEmail")}
                           </a>
                         </span>
                       </p>
                     </li>
                     <li>
                       <p>
-                        <label>Phone:</label>
-                        <span>+84 338 575 296</span>
+                        <label>{t("contact.phone")}</label>
+                        <a href="tel:+84338575296">{t("contact.myPhone")}</a>
                       </p>
                     </li>
                     <li>
                       <p>
-                        <label>Github:</label>
+                        <label>{t("contact.github")}</label>
                         <span>
                           <a
                             href="https://github.com/Thanhdat013"
                             target="_blank"
                             rel="noopener"
                           >
-                            https://github.com/Thanhdat013
+                            {t("contact.myGithub")}
                           </a>
                         </span>
                       </p>
@@ -86,7 +88,7 @@ const Contact = () => {
           </div>
           <div className="arlo_tm_footer_wrap">
             <div className="container">
-              <p>&copy; Copyright 2023. All Rights are Reserved.</p>
+              <p>{t("contact.footer")}</p>
             </div>
           </div>
         </div>

@@ -11,16 +11,16 @@ import { useTranslation } from "react-i18next"
 const About = () => {
   const sceneEl = useRef(null)
 
-  // useEffect(() => {
-  //   if (sceneEl && sceneEl.current) {
-  //     const parallaxInstance = new Parallax(sceneEl.current, {
-  //       relativeInput: true,
-  //       hoverOnly: true,
-  //     })
-  //     parallaxInstance.enable()
-  //     return () => parallaxInstance.disable()
-  //   }
-  // }, [])
+  useEffect(() => {
+    if (sceneEl && sceneEl.current) {
+      const parallaxInstance = new Parallax(sceneEl.current, {
+        relativeInput: true,
+        hoverOnly: true,
+      })
+      parallaxInstance.enable()
+      return () => parallaxInstance.disable()
+    }
+  }, [])
 
   const { t } = useTranslation()
   return (
@@ -102,16 +102,16 @@ const About = () => {
                   </div>
                   <div className="definition">
                     <p>
-                      {t("about.intro1")}{" "}
-                      <strong> {t("about.subIntro1")}</strong>
+                      {t("about.intro-1")}{" "}
+                      <strong> {t("about.subIntro-1")}</strong>
                       {t("about.intro1-1")}
                     </p>
                     <br />
-                    <p>{t("about.intro2")}</p>
+                    <p>{t("about.intro-2")}</p>
                     <br />
-                    <p>{t("about.intro3")}</p>
+                    <p>{t("about.intro-3")}</p>
                     <br />
-                    <p>{t("about.intro4")}</p>
+                    <p>{t("about.intro-4")}</p>
                   </div>
                   <div className="about_short_contact_wrap">
                     <ul>
