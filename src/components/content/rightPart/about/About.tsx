@@ -67,8 +67,8 @@ const About = () => {
                       <img src={bgi} alt="550x640" />
                       <div
                         className="inner"
-                        data-img-url={portrait}
-                        style={{ backgroundImage: `url(${portrait})` }}
+                        data-img-url={avatarAuth}
+                        style={{ backgroundImage: `url(${avatarAuth})` }}
                       ></div>
                     </div>
                     <div className="border layer" data-depth="0.3">

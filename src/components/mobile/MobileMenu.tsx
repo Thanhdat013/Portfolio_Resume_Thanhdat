@@ -1,9 +1,26 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import logoMobile from "~/assets/img/logo/mobile_logo.png"
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx"
 import { useTranslation } from "react-i18next"
 const MobileMenu = () => {
   const [activeTab, setActiveTab] = useState<string>("home")
+
+  useEffect(() => {
+    const { hash } = window.location
+    if (hash) {
+      const tab = hash.replace("#", "")
+      setActiveTab(tab)
+
+      const section = document.querySelector(hash)
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    }
+  }, [])
+
   const handleScrollTab = (
     tab: string,
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -15,9 +32,10 @@ const MobileMenu = () => {
       section.scrollIntoView({ behavior: "smooth", block: "start" })
       setTimeout(() => {
         window.location.hash = tab
-      }, 1000)
+      }, 400)
     }
   }
+
   const [openMenuMobile, setOpenMenuMobile] = useState<boolean>(false)
   // multiple languages
   const { t, i18n } = useTranslation()

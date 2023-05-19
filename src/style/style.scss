@@ -1015,9 +1015,10 @@ placeholder {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-top: 100px;
+  // padding-top: 100px;
   &.about-mobile {
-    padding-top: 24px;
+    padding-top: 12px;
+    // margin-top: 67px;
   }
 }
 .arlo_tm_main_title_holder {

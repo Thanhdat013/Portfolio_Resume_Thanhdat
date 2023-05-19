@@ -1,9 +1,8 @@
-import desktopLogo from "~/assets/img/logo/mobile_logo.png"
-import desktopLogo1 from "~/assets/img/logo/Vitejs-logo.svg"
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { isMobile } from "react-device-detect"
-import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs"
 import { useTranslation } from "react-i18next"
+import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs"
+import desktopLogo from "~/assets/img/logo/mobile_logo.png"
 
 interface Props {
   showLeftPart: boolean
@@ -35,7 +34,7 @@ const LeftPart = (props: Props) => {
       section.scrollIntoView({ behavior: "smooth", block: "start" })
       setTimeout(() => {
         window.location.hash = tab
-      }, 1000)
+      }, 400)
     }
   }
 

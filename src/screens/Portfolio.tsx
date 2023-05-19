@@ -11,7 +11,6 @@ const Portfolio = () => {
   const [showLeftPart, setShowLeftPart] = useState<boolean>(false)
   useEffect(() => {
     if (isMobile) setShowLeftPart(true)
-    console.log(isMobile)
   }, [isMobile])
   return (
     <div className="arlo_tm_wrapper_all">

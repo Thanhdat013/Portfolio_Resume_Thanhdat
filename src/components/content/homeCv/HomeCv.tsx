@@ -1,6 +1,6 @@
 import { isMobile } from "react-device-detect"
 import { TypeAnimation } from "react-type-animation"
-import avatar from "~/assets/img/hero/avatar.jpg"
+// import avatar from "~/assets/img/hero/avatar.jpg"
 import avatarAuth from "~/assets/img/hero/auth.jpg"
 import { useTranslation } from "react-i18next"
 const HomeCv = () => {
@@ -32,7 +32,7 @@ const HomeCv = () => {
             <div className="content hero">
               <div className="inner_content">
                 <div className="image_wrap">
-                  <img src={avatar} alt="hero" />
+                  <img src={avatarAuth} alt="hero" />
                 </div>
                 <div className="name_holder">
                   <h3>
