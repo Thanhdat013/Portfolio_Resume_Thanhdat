@@ -14,8 +14,17 @@ interface DataDetail {
   title: string
   detail: {
     description: string
-    Frontend: string
-    Backend: string
+    feature_1: string
+    feature_2: string
+    feature_3: string
+    feature_4: string
+
+    feature_5?: string
+    feature_6?: string
+    feature_7?: string
+
+    frontend: string
+    backend: string
     role: string
     member: number
     demo: string
@@ -52,8 +61,15 @@ const Project = () => {
       title: t("detailProject.project-1.title"),
       detail: {
         description: t("detailProject.project-1.description"),
-        Frontend: t("detailProject.project-1.frontend"),
-        Backend: t("detailProject.project-1.backend"),
+        feature_1: t("detailProject.project-1.feature_1"),
+        feature_2: t("detailProject.project-1.feature_2"),
+        feature_3: t("detailProject.project-1.feature_3"),
+        feature_4: t("detailProject.project-1.feature_4"),
+        feature_5: t("detailProject.project-1.feature_5") || "",
+        feature_6: t("detailProject.project-1.feature_6") || "",
+        feature_7: t("detailProject.project-1.feature_7") || "",
+        frontend: t("detailProject.project-1.frontend"),
+        backend: t("detailProject.project-1.backend"),
         role: t("detailProject.project-1.role"),
         member: 1,
         demo: t("detailProject.project-1.demo"),
@@ -66,8 +82,13 @@ const Project = () => {
       title: t("detailProject.project-2.title"),
       detail: {
         description: t("detailProject.project-2.description"),
-        Frontend: t("detailProject.project-2.frontend"),
-        Backend: t("detailProject.project-2.backend"),
+        feature_1: t("detailProject.project-2.feature_1"),
+        feature_2: t("detailProject.project-2.feature_2"),
+        feature_3: t("detailProject.project-2.feature_3"),
+        feature_4: t("detailProject.project-2.feature_4"),
+
+        frontend: t("detailProject.project-2.frontend"),
+        backend: t("detailProject.project-2.backend"),
         role: t("detailProject.project-2.role"),
         member: 1,
         demo: t("detailProject.project-2.demo"),
@@ -80,8 +101,15 @@ const Project = () => {
       title: t("detailProject.project-3.title"),
       detail: {
         description: t("detailProject.project-3.description"),
-        Frontend: t("detailProject.project-3.frontend"),
-        Backend: t("detailProject.project-3.backend"),
+        feature_1: t("detailProject.project-3.feature_1"),
+        feature_2: t("detailProject.project-3.feature_2"),
+        feature_3: t("detailProject.project-3.feature_3"),
+        feature_4: t("detailProject.project-3.feature_4"),
+        feature_5: t("detailProject.project-3.feature_5") || "",
+        feature_6: t("detailProject.project-3.feature_6") || "",
+        feature_7: t("detailProject.project-3.feature_7") || "",
+        frontend: t("detailProject.project-3.frontend"),
+        backend: t("detailProject.project-3.backend"),
         role: t("detailProject.project-3.role"),
         member: 1,
         demo: t("detailProject.project-3.demo"),
@@ -158,7 +186,7 @@ const Project = () => {
               ? `${t("project.name")} ${dataDetail.title}`
               : ""
           }
-          width={isMobile ? "70vw" : "40vw"}
+          width={isMobile ? "80vw" : "42vw"}
           open={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}
@@ -166,12 +194,31 @@ const Project = () => {
           closable={false}
         >
           {dataDetail && (
-            <ul style={{ listStyle: "none" }}>
+            <ul style={{ listStyle: "none", fontFamily: "Open Sans" }}>
               <li>{`${t("project.desc")} ${dataDetail.detail.description}`}</li>
+              <li>
+                {t("project.feature")}
+                <ul style={{ listStyle: "inside", paddingRight: "8px" }}>
+                  <li>{dataDetail.detail.feature_1}</li>
+                  <li>{dataDetail.detail.feature_2}</li>
+                  <li>{dataDetail.detail.feature_3}</li>
+                  <li>{dataDetail.detail.feature_4}</li>
+
+                  {dataDetail.detail.feature_5 && (
+                    <li>{dataDetail.detail.feature_5}</li>
+                  )}
+                  {dataDetail.detail.feature_6 && (
+                    <li>{dataDetail.detail.feature_6}</li>
+                  )}
+                  {dataDetail.detail.feature_7 && (
+                    <li>{dataDetail.detail.feature_7}</li>
+                  )}
+                </ul>
+              </li>
               <li>{`${t("project.frontend")} ${
-                dataDetail.detail.Frontend
+                dataDetail.detail.frontend
               } `}</li>
-              <li>{`${t("project.backend")} ${dataDetail.detail.Backend}`}</li>
+              <li>{`${t("project.backend")} ${dataDetail.detail.backend}`}</li>
               <li>{`${t("project.member")} ${dataDetail.detail.member}`}</li>
               <li>{`${t("project.role")} ${dataDetail.detail.role}`}</li>
               <li>
