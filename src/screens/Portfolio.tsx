@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react"
 import { FloatButton } from "antd"
+import { useEffect, useState } from "react"
 import { isMobile } from "react-device-detect"
 
-import Preloader from "~/components/content/preLoader/Preloader"
 import LeftPart from "~/components/content/leftPart/LeftPart"
 import RightPart from "~/components/content/rightPart/RightPart"
 import MobileMenu from "~/components/mobile/MobileMenu"
@@ -22,9 +21,6 @@ const Portfolio = () => {
           <a href="#home"></a>
         </span>
       </div>
-
-      {/* <!-- PRELOADER --> */}
-      <Preloader />
 
       {/* <!-- MOBILE MENU --> */}
       {isMobile && <MobileMenu />}

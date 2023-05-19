@@ -1,8 +1,8 @@
 import { isMobile } from "react-device-detect"
 import { TypeAnimation } from "react-type-animation"
 // import avatar from "~/assets/img/hero/avatar.jpg"
-import avatarAuth from "~/assets/img/hero/auth.jpg"
 import { useTranslation } from "react-i18next"
+import avatarAuth from "~/assets/img/hero/auth.jpg"
 const HomeCv = () => {
   const handleScrollToAbout = () => {
     const section = document.querySelector("#about")

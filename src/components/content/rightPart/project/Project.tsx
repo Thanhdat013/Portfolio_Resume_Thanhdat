@@ -2,11 +2,11 @@ import { Modal } from "antd"
 import { useState } from "react"
 import { isMobile } from "react-device-detect"
 
+import { useTranslation } from "react-i18next"
+import { BsArrowRight } from "react-icons/bs"
 import { FaReact } from "react-icons/fa"
 import { MdOutlineQuiz } from "react-icons/md"
 import { SiNextdotjs } from "react-icons/si"
-import { BsArrowRight } from "react-icons/bs"
-import { useTranslation } from "react-i18next"
 
 interface DataDetail {
   image: JSX.Element
