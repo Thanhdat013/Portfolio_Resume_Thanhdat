@@ -1,15 +1,19 @@
-import { isMobile } from "react-device-detect"
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 const Contact = () => {
   const { t } = useTranslation()
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
+  useEffect(() => {
+    if (window.innerWidth < 740) setIsMobileDevice(true)
+  }, [isMobileDevice])
   return (
     <>
       {" "}
       <div
         style={{ backgroundColor: " #f6f7fd" }}
         className={
-          isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
+          isMobileDevice ? "arlo_tm_section device-mobile" : "arlo_tm_section"
         }
         id="contact"
       >
@@ -28,7 +32,7 @@ const Contact = () => {
               >
                 <div
                   className={
-                    isMobile
+                    isMobileDevice
                       ? "short_info_wrap contact-mobile"
                       : "short_info_wrap"
                   }

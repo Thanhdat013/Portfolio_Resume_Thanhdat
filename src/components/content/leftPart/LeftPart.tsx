@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { isMobile } from "react-device-detect"
+
 import { useTranslation } from "react-i18next"
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs"
 import desktopLogo from "~/assets/img/logo/mobile_logo.png"
@@ -39,7 +39,10 @@ const LeftPart = (props: Props) => {
       }, 400)
     }
   }
-
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
+  useEffect(() => {
+    if (window.innerWidth < 740) setIsMobileDevice(true)
+  }, [isMobileDevice])
   // multiple languages
   const { t, i18n } = useTranslation()
 
@@ -191,7 +194,7 @@ const LeftPart = (props: Props) => {
               </ul>
             </div>
           </div>
-          {!isMobile && (
+          {!isMobileDevice && (
             <a
               className={
                 !props.showLeftPart

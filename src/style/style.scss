@@ -210,8 +210,6 @@ img.svg {
   padding: 0;
 }
 .arlo_tm_section {
-  // background-color: #f6f7fd;
-  // padding-top: 100px;
   padding-top: 60px;
   width: 100%;
   height: auto;
@@ -228,9 +226,6 @@ img.svg {
   &.device-mobile {
     padding: 12px 8px 0;
     height: auto;
-  }
-  &.device-pc {
-    height: 100vh;
   }
 }
 .arlo_tm_content {
@@ -1018,7 +1013,7 @@ placeholder {
   // padding-top: 100px;
   &.about-mobile {
     padding-top: 12px;
-    // margin-top: 67px;
+    margin-top: 52px;
   }
 }
 .arlo_tm_main_title_holder {
@@ -1109,6 +1104,7 @@ placeholder {
     padding-top: 100px;
     &.skill-mobile {
       padding-top: 24px;
+      margin-top: 67px;
     }
   }
   &.skill-mobile {
@@ -1317,6 +1313,7 @@ placeholder {
   box-sizing: border-box;
   &.skill-mobile {
     padding-top: 32px;
+    margin-top: 34px;
   }
   .arlo_tm_title_holder_wrap {
     margin-bottom: 93px;
@@ -2851,8 +2848,16 @@ placeholder {
       padding-right: 0px;
     }
   }
-}
-@media (max-width: 1200px) {
+
+  @media (max-width: 1200px) {
+    // .arlo_tm_leftpart_wrap {
+    //   width: 220px !important;
+    // }
+    // .arlo_tm_rightpart {
+    //   padding-left: 220px !important ;
+    // }
+  }
+
   .arlo_tm_services_wrap {
     .list_wrap {
       ul {

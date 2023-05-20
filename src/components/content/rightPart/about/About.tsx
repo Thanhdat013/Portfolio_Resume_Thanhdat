@@ -1,10 +1,9 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { TypeAnimation } from "react-type-animation"
 import bgi from "~/assets/img/about/550x640.jpg"
 import avatarAuth from "~/assets/img/hero/auth.jpg"
 
 import Parallax from "parallax-js"
-import { isMobile } from "react-device-detect"
 import { useTranslation } from "react-i18next"
 import myCv from "~/assets/cv/v1.0-Detail-Debugging.pdf"
 const About = () => {
@@ -22,12 +21,16 @@ const About = () => {
   }, [])
 
   const { t } = useTranslation()
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
+  useEffect(() => {
+    if (window.innerWidth < 740) setIsMobileDevice(true)
+  }, [isMobileDevice])
   return (
     <>
       <div
         // style={{ height: "100vh" }}
         className={
-          isMobile
+          isMobileDevice
             ? "arlo_tm_section device-mobile relative"
             : "arlo_tm_section relative"
         }
@@ -35,7 +38,7 @@ const About = () => {
       >
         <div
           className={
-            isMobile
+            isMobileDevice
               ? "arlo_tm_about_wrapper_all about-mobile"
               : "arlo_tm_about_wrapper_all"
           }
@@ -50,13 +53,17 @@ const About = () => {
             </div>
             <div
               className={
-                isMobile
+                isMobileDevice
                   ? "arlo_tm_about_wrap about-mobile"
                   : "arlo_tm_about_wrap"
               }
             >
               <div className="author_wrap">
-                <div className={isMobile ? "leftbox about-mobile" : "leftbox"}>
+                <div
+                  className={
+                    isMobileDevice ? "leftbox about-mobile" : "leftbox"
+                  }
+                >
                   <div
                     className="about_image_wrap parallax"
                     ref={sceneEl}
@@ -77,7 +84,9 @@ const About = () => {
                   </div>
                 </div>
                 <div
-                  className={isMobile ? "rightbox about-mobile" : "rightbox"}
+                  className={
+                    isMobileDevice ? "rightbox about-mobile" : "rightbox"
+                  }
                 >
                   <div className="arlo_tm_mini_title_holder">
                     <h4>

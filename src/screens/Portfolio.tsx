@@ -8,9 +8,13 @@ import MobileMenu from "~/components/mobile/MobileMenu"
 
 const Portfolio = () => {
   const [showLeftPart, setShowLeftPart] = useState<boolean>(false)
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
   useEffect(() => {
-    if (isMobile) setShowLeftPart(true)
-  }, [isMobile])
+    if (window.innerWidth < 740) {
+      setIsMobileDevice(true), setShowLeftPart(true)
+    }
+    // if (isMobile) setShowLeftPart(true)
+  }, [isMobileDevice])
   return (
     <div className="arlo_tm_wrapper_all">
       <div id="arlo_tm_popup_blog">
@@ -23,7 +27,7 @@ const Portfolio = () => {
       </div>
 
       {/* <!-- MOBILE MENU --> */}
-      {isMobile && <MobileMenu />}
+      {isMobileDevice && <MobileMenu />}
 
       {/* <!-- CONTENT --> */}
       <div className="arlo_tm_content">

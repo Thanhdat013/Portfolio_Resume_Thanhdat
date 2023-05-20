@@ -1,6 +1,5 @@
 import { Modal } from "antd"
-import { useState } from "react"
-import { isMobile } from "react-device-detect"
+import { useState, useEffect } from "react"
 
 import { useTranslation } from "react-i18next"
 import { BsArrowRight } from "react-icons/bs"
@@ -50,7 +49,10 @@ const Project = () => {
     setIsModalOpen(false)
     setDataDetail(null)
   }
-
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
+  useEffect(() => {
+    if (window.innerWidth < 740) setIsMobileDevice(true)
+  }, [isMobileDevice])
   const dataProject: DataDetail[] = [
     {
       image: <FaReact size={50} color={"#2bebfd"} />,
@@ -121,13 +123,13 @@ const Project = () => {
       {" "}
       <div
         className={
-          isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
+          isMobileDevice ? "arlo_tm_section device-mobile" : "arlo_tm_section"
         }
         id="project"
       >
         <div
           className={
-            isMobile
+            isMobileDevice
               ? "arlo_tm_services_wrap skill-mobile"
               : "arlo_tm_services_wrap"
           }
@@ -135,7 +137,7 @@ const Project = () => {
           <div className="container">
             <div
               className={
-                isMobile
+                isMobileDevice
                   ? "arlo_tm_title_holder project-mobile"
                   : "arlo_tm_title_holder"
               }
@@ -144,7 +146,9 @@ const Project = () => {
               <span>{t("project.title")}</span>
             </div>
             <div
-              className={isMobile ? "list_wrap project-mobile" : "list_wrap"}
+              className={
+                isMobileDevice ? "list_wrap project-mobile" : "list_wrap"
+              }
             >
               <ul>
                 {dataProject.map((item, index) => (
@@ -184,7 +188,7 @@ const Project = () => {
               ? `${t("project.name")} ${dataDetail.title}`
               : ""
           }
-          width={isMobile ? "80vw" : "42vw"}
+          width={isMobileDevice ? "80vw" : "60vw"}
           open={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}

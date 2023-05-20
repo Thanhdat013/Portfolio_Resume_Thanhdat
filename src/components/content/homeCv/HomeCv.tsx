@@ -1,4 +1,4 @@
-import { isMobile } from "react-device-detect"
+import { useEffect, useState } from "react"
 import { TypeAnimation } from "react-type-animation"
 // import avatar from "~/assets/img/hero/avatar.jpg"
 import { useTranslation } from "react-i18next"
@@ -11,12 +11,16 @@ const HomeCv = () => {
     }
   }
   const { t } = useTranslation()
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
+  useEffect(() => {
+    if (window.innerWidth < 740) setIsMobileDevice(true)
+  }, [isMobileDevice])
   return (
     <>
       {" "}
       <div
         className={
-          isMobile ? "arlo_tm_section device-mobile" : "arlo_tm_section"
+          isMobileDevice ? "arlo_tm_section device-mobile" : "arlo_tm_section"
         }
         id="home"
       >
