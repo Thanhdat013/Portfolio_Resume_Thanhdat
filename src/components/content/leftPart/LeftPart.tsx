@@ -18,10 +18,10 @@ const LeftPart = (props: Props) => {
     if (hash) {
       const tab = hash.replace("#", "")
       setActiveTab(tab)
-      // const section = document.querySelector(`${hash}`)
-      // if (section) {
-      //   section.scrollIntoView({ behavior: "smooth", block: "start" })
-      // }
+      const section = document.querySelector(`${hash}`)
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
     }
   }, [])
 

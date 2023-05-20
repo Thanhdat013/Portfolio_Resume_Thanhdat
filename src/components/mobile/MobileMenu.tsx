@@ -12,13 +12,13 @@ const MobileMenu = () => {
       setActiveTab(tab)
 
       const section = document.querySelector(hash)
-      if (section) {
-        section.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        })
-      }
+      // if (section) {
+      //   section.scrollIntoView({
+      //     behavior: "smooth",
+      //     block: "start",
+      //     inline: "nearest",
+      //   })
+      // }
     }
   }, [])
 
