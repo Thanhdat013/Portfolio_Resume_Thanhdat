@@ -16,6 +16,7 @@ const MobileMenu = () => {
         section.scrollIntoView({
           behavior: "smooth",
           block: "start",
+          inline: "nearest",
         })
       }
     }

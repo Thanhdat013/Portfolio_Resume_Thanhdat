@@ -13,13 +13,15 @@ const LeftPart = (props: Props) => {
 
   useEffect(() => {
     const { hash } = window.location
+    console.log(hash)
+
     if (hash) {
       const tab = hash.replace("#", "")
       setActiveTab(tab)
-      const section = document.querySelector(`${hash}`)
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" })
-      }
+      // const section = document.querySelector(`${hash}`)
+      // if (section) {
+      //   section.scrollIntoView({ behavior: "smooth", block: "start" })
+      // }
     }
   }, [])
 

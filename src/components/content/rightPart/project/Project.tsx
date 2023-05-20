@@ -39,8 +39,6 @@ const Project = () => {
 
   const showModal = (item: DataDetail) => {
     setIsModalOpen(true)
-    console.log(item)
-
     setDataDetail(item)
   }
 
@@ -191,7 +189,6 @@ const Project = () => {
           onOk={handleOk}
           onCancel={handleCancel}
           footer={false}
-          closable={false}
         >
           {dataDetail && (
             <ul style={{ listStyle: "none", fontFamily: "Open Sans" }}>
