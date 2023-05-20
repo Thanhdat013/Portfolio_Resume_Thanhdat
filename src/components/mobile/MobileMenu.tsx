@@ -11,7 +11,7 @@ const MobileMenu = () => {
       const tab = hash.replace("#", "")
       setActiveTab(tab)
 
-      const section = document.querySelector(hash)
+      // const section = document.querySelector(hash)
       // if (section) {
       //   section.scrollIntoView({
       //     behavior: "smooth",
