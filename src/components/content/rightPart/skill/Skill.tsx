@@ -13,7 +13,9 @@ const Skill = () => {
       <div
         style={{ backgroundColor: "#f6f7fd" }}
         className={
-          isMobileDevice ? "arlo_tm_section device-mobile" : "arlo_tm_section "
+          isMobileDevice
+            ? "arlo_tm_section device-mobile"
+            : "arlo_tm_section skill-pc"
         }
         id="skills"
       >

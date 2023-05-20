@@ -6,20 +6,8 @@ const MobileMenu = () => {
   const [activeTab, setActiveTab] = useState<string>("home")
 
   useEffect(() => {
-    const { hash } = window.location
-    if (hash) {
-      const tab = hash.replace("#", "")
-      setActiveTab(tab)
-
-      // const section = document.querySelector(hash)
-      // if (section) {
-      //   section.scrollIntoView({
-      //     behavior: "smooth",
-      //     block: "start",
-      //     inline: "nearest",
-      //   })
-      // }
-    }
+    setActiveTab("home")
+    window.location.hash = "home"
   }, [])
 
   const handleScrollTab = (

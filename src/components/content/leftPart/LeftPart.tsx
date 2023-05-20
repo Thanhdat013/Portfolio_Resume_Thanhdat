@@ -9,21 +9,27 @@ interface Props {
   setShowLeftPart: (value: boolean) => void
 }
 const LeftPart = (props: Props) => {
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
+  useEffect(() => {
+    if (window.innerWidth < 740) setIsMobileDevice(true)
+  }, [window.innerWidth])
   const [activeTab, setActiveTab] = useState<string>("home")
 
   useEffect(() => {
-    const { hash } = window.location
-    console.log(hash)
+    if (window.innerWidth > 740) {
+      const { hash } = window.location
+      console.log(hash)
 
-    if (hash) {
-      const tab = hash.replace("#", "")
-      setActiveTab(tab)
-      const section = document.querySelector(`${hash}`)
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" })
+      if (hash) {
+        const tab = hash.replace("#", "")
+        setActiveTab(tab)
+        const section = document.querySelector(`${hash}`)
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
       }
     }
-  }, [])
+  }, [window.innerWidth])
 
   const handleScrollTab = (
     tab: string,
@@ -39,10 +45,7 @@ const LeftPart = (props: Props) => {
       }, 400)
     }
   }
-  const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false)
-  useEffect(() => {
-    if (window.innerWidth < 740) setIsMobileDevice(true)
-  }, [isMobileDevice])
+
   // multiple languages
   const { t, i18n } = useTranslation()
 

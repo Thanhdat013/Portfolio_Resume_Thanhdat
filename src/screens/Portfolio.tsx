@@ -1,6 +1,5 @@
 import { FloatButton } from "antd"
 import { useEffect, useState } from "react"
-import { isMobile } from "react-device-detect"
 
 import LeftPart from "~/components/content/leftPart/LeftPart"
 import RightPart from "~/components/content/rightPart/RightPart"
