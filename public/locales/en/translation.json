@@ -84,7 +84,7 @@
       "frontend": "React.Js, Redux Toolkit, Ant Design, SCSS.",
       "backend": "Node.js, MongDB.",
       "role": "Development.",
-      "demo": "https://reactjs-frontend.thanhdat-tiki.click/",
+      "demo": "https://reactjs-frontend.thanhdat-tiki.click",
       "github": "https://github.com/Thanhdat013/Clone_Tiki"
     },
     "project-2": {
@@ -98,25 +98,23 @@
       "frontend": "Next.Js (TypeScript), Material UI v5.",
       "backend": "RESTful API. ",
       "role": "Development.",
-      "demo": "https://nextjs-basic-kappa-eight.vercel.app/",
+      "demo": "https://nextjs-basic-kappa-eight.vercel.app",
       "github": "https://github.com/Thanhdat013/Nextjs-basic"
     },
     "project-3": {
-      "title": "Website for  quizzes.",
-      "shortDescription": "A website that makes quizzes with many different topics.",
-      "description": "Build a website for assessment quizzes, where users can easily access and choose from different topics.",
-      "feature_1": "Login, register, save user data and user authorization.",
-      "feature_2": "Manage, display, paginate all users, add, update and delete users.",
-      "feature_3": "Manage, display, paginate all quizzes, add, update, delete and assign quizzes to users.",
-      "feature_4": "Manage, display, add, update and delete questions and answers with corresponding quiz.",
-      "feature_5": "Take a timed quiz, display answers, number of correct answers after taking the quiz.",
-      "feature_6": "English and Vietnamese language options.",
-      "feature_7": "Responsive: support on multiple screens.",
-      "frontend": "React.Js (Javascript), Redux, Bootstrap",
-      "backend": "Node.js, Docker",
+      "title": "Website for my resume.",
+      "shortDescription": "A website to introduce yourself.",
+      "description": "Build a website to introduce yourself, with personal information, done projects and contact methods.",
+      "feature_1": "Display your personal information and contact methods.",
+      "feature_2": "Download personal curriculum vitae.",
+      "feature_3": "Information about completed projects and links.",
+      "feature_4": "English and Vietnamese language options.",
+      "feature_5": "Responsive: support on multiple screens.",
+      "frontend": "React.Js (Typescript), SCSS, Antd.",
+      "backend": "No",
       "role": "Development.",
-      "demo": "",
-      "github": "https://github.com/Thanhdat013/React_Quiz-test"
+      "demo": "https://portfolio-resume-thanhdat.vercel.app",
+      "github": "https://github.com/Thanhdat013/Portfolio_Resume_Thanhdat"
     }
   },
 

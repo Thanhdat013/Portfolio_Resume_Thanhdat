@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { BsArrowRight } from "react-icons/bs"
 import { FaReact } from "react-icons/fa"
-import { MdOutlineQuiz } from "react-icons/md"
+import { ImProfile } from "react-icons/im"
 import { SiNextdotjs } from "react-icons/si"
 
 interface DataDetail {
@@ -96,7 +96,7 @@ const Project = () => {
       },
     },
     {
-      image: <MdOutlineQuiz size={50} color={"#7cb305"} />,
+      image: <ImProfile size={50} color={"#526D82"} />,
       shortDescription: t("detailProject.project-3.shortDescription"),
       title: t("detailProject.project-3.title"),
       detail: {
@@ -224,14 +224,18 @@ const Project = () => {
               <li>{`${t("project.role")} ${dataDetail.detail.role}`}</li>
               <li>
                 {t("project.demo")}
-                <a target="_blank" rel="noreferrer noopener">
+                <a
+                  href={dataDetail.detail.demo}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   {dataDetail.detail.demo}
                 </a>
               </li>
               <li>
                 {t("project.github")}
                 <a
-                  href="https://github.com/Thanhdat013/Clone_Tiki"
+                  href={dataDetail.detail.github}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
