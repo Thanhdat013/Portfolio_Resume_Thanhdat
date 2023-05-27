@@ -77,17 +77,31 @@
       "feature_1": "Đăng nhập, đăng ký, lưu dữ liệu người dùng và phân quyền người dùng.",
       "feature_2": "Tìm kiếm sản phẩm theo tên, lọc sản phẩm theo khoảng giá, danh mục, số lượng.",
       "feature_3": "Quản lý, thêm bớt sản phẩm trong giỏ hàng theo dữ liệu người dùng.",
-      "feature_4": "Quản lý, hiển thị, phân trang tất cả người dùng , thêm, cập nhật và xóa người dùng.",
+      "feature_4": "Quản lý, hiển thị, phân trang tất cả người dùng, thêm, cập nhật và xóa người dùng.",
       "feature_5": "Quản lý, hiển thị, phân trang tất cả sản phẩm, thêm, cập nhật và xóa sản phẩm.",
       "feature_6": "Nhập, xuất dữ liệu người dùng.",
       "feature_7": "Responsive: hỗ trợ trên nhiều màn hình.",
-      "frontend": "React.Js, Redux Toolkit, Ant Design, SCSS.",
+      "frontend": "React.Js(Javascript), Redux Toolkit, Ant Design, SCSS.",
       "backend": "Node.js, MongDB.",
       "role": "Nhà phát triển.",
       "demo": "https://reactjs-frontend.thanhdat-tiki.click",
       "github": "https://github.com/Thanhdat013/Clone_Tiki"
     },
     "project-2": {
+      "title": "Trang web về nhà hàng.",
+      "shortDescription": "Một trang web để người dùng đặt các món ăn tại nhà hàng Tám.",
+      "description": "Xây dựng một trang web đặt món ăn, nơi người dùng có thể dễ dang truy cập và tìm kiếm các món ăn mình yêu thích.",
+      "feature_1": "Đăng nhập, đăng ký, lưu dữ liệu người dùng và phân quyền người dùng.",
+      "feature_2": "Quản lý, thêm bớt sản phẩm trong giỏ hàng theo dữ liệu người dùng.",
+      "feature_3": "Quản lý, hiển thị, thêm mới và phân trang tất cả sản phẩm.",
+      "feature_4": "Responsive: hỗ trợ trên nhiều màn hình.",
+      "frontend": "React.Js (Javascript), Redux Toolkit, Tailwind.",
+      "backend": "Firebase",
+      "role": "Nhà phát triển.",
+      "demo": "https://food-delivery-git-main-thanhdat013.vercel.app",
+      "github": "https://github.com/Thanhdat013/Food_delivery"
+    },
+    "project-3": {
       "title": "Danh mục cá nhân đơn giản.",
       "shortDescription": "Một danh mục cá nhân đơn giản để giới thiệu bản thân.",
       "description": "Xây dựng một danh mục cá nhân đơn giản để giới thiệu bản thân với thông tin cá nhân, các dự án đã thực hiện và các bài đăng trên blog.",
@@ -100,21 +114,6 @@
       "role": "Nhà phát triển.",
       "demo": "https://nextjs-basic-kappa-eight.vercel.app",
       "github": "https://github.com/Thanhdat013/Nextjs-basic"
-    },
-    "project-3": {
-      "title": "Trang web về hồ sơ cá nhân của mình.",
-      "shortDescription": "Một trang web giới thiệu thông tin bản thân của mình.",
-      "description": "Xây dựng một trang web giới thiệu thông tin của bản thân mình, với các thông tin cá nhân, các dự án đã làm và phương thức liên lạc.",
-      "feature_1": "Hiển thị các thông tin và phương thức liên lạc cá nhân của bản thân.",
-      "feature_2": "Tải hồ sở ứng tuyển cá nhân.",
-      "feature_3": "Thông tin các dự án đã làm và đường dẫn liên kết",
-      "feature_4": "Tùy chọn ngôn ngữ tiếng Anh và tiếng Việt",
-      "feature_5": "Responsive: hỗ trợ trên nhiều màn hình.",
-      "frontend": "React.Js (Typescript), SCSS, Antd.",
-      "backend": "Không",
-      "role": "Nhà phát triển.",
-      "demo": "https://portfolio-resume-thanhdat.vercel.app",
-      "github": "https://github.com/Thanhdat013/Portfolio_Resume_Thanhdat"
     }
   },
 

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { BsArrowRight } from "react-icons/bs"
 import { FaReact } from "react-icons/fa"
 import { ImProfile } from "react-icons/im"
-import { SiNextdotjs } from "react-icons/si"
+import { MdOutlineFoodBank } from "react-icons/md"
 
 interface DataDetail {
   image: JSX.Element
@@ -77,7 +77,7 @@ const Project = () => {
       },
     },
     {
-      image: <SiNextdotjs size={50} color={"#20262E"} />,
+      image: <MdOutlineFoodBank size={50} color={"#E57C23"} />,
       shortDescription: t("detailProject.project-2.shortDescription"),
       title: t("detailProject.project-2.title"),
       detail: {

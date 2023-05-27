@@ -88,6 +88,20 @@
       "github": "https://github.com/Thanhdat013/Clone_Tiki"
     },
     "project-2": {
+      "title": "Website for restaurant.",
+      "shortDescription": "A website for users to order food at Tam restaurant.",
+      "description": "Build a food ordering website, where users can easily access and search for their favorite foods.",
+      "feature_1": "Login, register, save user data and user authorization.",
+      "feature_2": "Manage, add, remove products in the shopping cart according to user data.",
+      "feature_3": "Manage, display, add and paginate all products",
+      "feature_4": "Responsive: support on multiple screens.",
+      "frontend": "React.Js (Javascript), Redux Toolkit, Tailwind.",
+      "backend": "Firebase",
+      "role": "Development.",
+      "demo": "https://food-delivery-git-main-thanhdat013.vercel.app",
+      "github": "https://github.com/Thanhdat013/Food_delivery"
+    },
+    "project-3": {
       "title": "Basic portfolio.",
       "shortDescription": "A simple personal portfolio resume to introduce yourself.",
       "description": "Build a simple personal resume to introduce yourself with personal information, projects done and blog posts.",
@@ -100,21 +114,6 @@
       "role": "Development.",
       "demo": "https://nextjs-basic-kappa-eight.vercel.app",
       "github": "https://github.com/Thanhdat013/Nextjs-basic"
-    },
-    "project-3": {
-      "title": "Website for my resume.",
-      "shortDescription": "A website to introduce yourself.",
-      "description": "Build a website to introduce yourself, with personal information, done projects and contact methods.",
-      "feature_1": "Display your personal information and contact methods.",
-      "feature_2": "Download personal curriculum vitae.",
-      "feature_3": "Information about completed projects and links.",
-      "feature_4": "English and Vietnamese language options.",
-      "feature_5": "Responsive: support on multiple screens.",
-      "frontend": "React.Js (Typescript), SCSS, Antd.",
-      "backend": "No",
-      "role": "Development.",
-      "demo": "https://portfolio-resume-thanhdat.vercel.app",
-      "github": "https://github.com/Thanhdat013/Portfolio_Resume_Thanhdat"
     }
   },
 
