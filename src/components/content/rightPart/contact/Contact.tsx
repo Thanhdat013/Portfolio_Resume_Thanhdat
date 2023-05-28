@@ -43,7 +43,7 @@ const Contact = () => {
                         <label>{t("contact.linkedin")}</label>
                         <span>
                           <a
-                            href="https://www.linkedin.com/in/%C4%91%E1%BA%A1t-kim-0b3b981aa/"
+                            href="https://www.linkedin.com/in/thanhdat13/"
                             target="_blank"
                             rel="noopener"
                           >
