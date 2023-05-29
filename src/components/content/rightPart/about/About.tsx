@@ -5,7 +5,8 @@ import avatarAuth from "~/assets/img/hero/auth.jpg"
 
 import Parallax from "parallax-js"
 import { useTranslation } from "react-i18next"
-import myCv from "~/assets/cv/v1.0-Detail-Debugging.pdf"
+import myCv from "~/assets/cv/CV_ThanhDat-FE.pdf"
+
 const About = () => {
   const sceneEl = useRef(null)
 
