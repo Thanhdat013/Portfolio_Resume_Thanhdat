@@ -157,7 +157,11 @@ const LeftPart = (props: Props) => {
             <div className="social_wrap">
               <ul>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.facebook.com/thanh.dat.1326/"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <BsFacebook
                       style={{
                         width: "30px",
