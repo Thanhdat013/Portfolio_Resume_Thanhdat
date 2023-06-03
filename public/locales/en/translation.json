@@ -114,6 +114,21 @@
       "role": "Development.",
       "demo": "https://nextjs-basic-kappa-eight.vercel.app",
       "github": "https://github.com/Thanhdat013/Nextjs-basic"
+    },
+    "project-4": {
+      "title": "Netflix clone.",
+      "shortDescription": "The website clones the website Netflix.com.",
+      "description": "Build a website like netflix website with API source from website developer.themoviedb.org.",
+      "feature_1": "Login, register, save user data.",
+      "feature_2": "Display all movies by genre.",
+      "feature_3": "Preview movie information, trailers, add movies to your list.",
+      "feature_4": "Pay, update, and cancel memberships with Stripe.",
+      "feature_5": "Responsive: support on multiple screens.",
+      "frontend": "Next.Js (TypeScript), Tailwind, Material UI v5.",
+      "backend": "Firebase, API from developer.themoviedb.org. ",
+      "role": "Development.",
+      "demo": "https://netflix-ts-liart.vercel.app",
+      "github": "https://github.com/Thanhdat013/Netflix-ts"
     }
   },
 

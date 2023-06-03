@@ -6,6 +6,7 @@ import { BsArrowRight } from "react-icons/bs"
 import { FaReact } from "react-icons/fa"
 import { ImProfile } from "react-icons/im"
 import { MdOutlineFoodBank } from "react-icons/md"
+import { RiNetflixLine } from "react-icons/ri"
 
 interface DataDetail {
   image: JSX.Element
@@ -114,6 +115,27 @@ const Project = () => {
         member: 1,
         demo: t("detailProject.project-3.demo"),
         github: t("detailProject.project-3.github"),
+      },
+    },
+    {
+      image: <RiNetflixLine size={50} color={"#e50914"} />,
+      shortDescription: t("detailProject.project-4.shortDescription"),
+      title: t("detailProject.project-4.title"),
+      detail: {
+        description: t("detailProject.project-4.description"),
+        feature_1: t("detailProject.project-4.feature_1"),
+        feature_2: t("detailProject.project-4.feature_2"),
+        feature_3: t("detailProject.project-4.feature_3"),
+        feature_4: t("detailProject.project-4.feature_4"),
+        feature_5: t("detailProject.project-4.feature_5") || "",
+        feature_6: t("detailProject.project-4.feature_6") || "",
+        feature_7: t("detailProject.project-4.feature_7") || "",
+        frontend: t("detailProject.project-4.frontend"),
+        backend: t("detailProject.project-4.backend"),
+        role: t("detailProject.project-4.role"),
+        member: 1,
+        demo: t("detailProject.project-4.demo"),
+        github: t("detailProject.project-4.github"),
       },
     },
   ]

@@ -114,6 +114,21 @@
       "role": "Nhà phát triển.",
       "demo": "https://nextjs-basic-kappa-eight.vercel.app",
       "github": "https://github.com/Thanhdat013/Nextjs-basic"
+    },
+    "project-4": {
+      "title": "Trang web sao chép Netflix.",
+      "shortDescription": "Trang web sap chép theo trang web Netflix.com.",
+      "description": "Xây dựng một trang web theo trang web Netflix.com với nguồn API từ trang web developer.themoviedb.org.",
+      "feature_1": "Đăng nhập, đăng ký, lưu dữ liệu người dùng.",
+      "feature_2": "Hiển thị các bộ phim theo thể loại.",
+      "feature_3": "Xem trước các thông tin, trailer của phim và thêm bộ phim vào danh sách phim của mình.",
+      "feature_4": "Thanh toán, cập nhật và hủy chế độ thành viên với phườn thức thanh toán Stripe.",
+      "feature_5": "Responsive: hỗ trợ trên nhiều màn hình.",
+      "frontend": "Next.Js (TypeScript), Tailwind, Material UI v5.",
+      "backend": "Firebase, API from developer.themoviedb.org. ",
+      "role": "Development.",
+      "demo": "https://netflix-ts-liart.vercel.app",
+      "github": "https://github.com/Thanhdat013/Netflix-ts"
     }
   },
 
