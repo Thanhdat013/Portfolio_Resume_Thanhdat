@@ -125,7 +125,7 @@
       "feature_4": "Pay, update, and cancel memberships with Stripe.",
       "feature_5": "Responsive: support on multiple screens.",
       "frontend": "Next.Js (TypeScript), Tailwind.",
-      "backend": "Next.Js (TypeScript), Tailwind, Material UI v5.",
+      "backend": "Firebase, API from developer.themoviedb.org.",
       "role": "Development.",
       "demo": "https://netflix-ts-liart.vercel.app",
       "github": "https://github.com/Thanhdat013/Netflix-ts"
