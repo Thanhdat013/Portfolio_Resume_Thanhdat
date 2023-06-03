@@ -106,9 +106,7 @@ const Project = () => {
         feature_2: t("detailProject.project-3.feature_2"),
         feature_3: t("detailProject.project-3.feature_3"),
         feature_4: t("detailProject.project-3.feature_4"),
-        feature_5: t("detailProject.project-3.feature_5") || "",
-        feature_6: t("detailProject.project-3.feature_6") || "",
-        feature_7: t("detailProject.project-3.feature_7") || "",
+
         frontend: t("detailProject.project-3.frontend"),
         backend: t("detailProject.project-3.backend"),
         role: t("detailProject.project-3.role"),
@@ -128,8 +126,7 @@ const Project = () => {
         feature_3: t("detailProject.project-4.feature_3"),
         feature_4: t("detailProject.project-4.feature_4"),
         feature_5: t("detailProject.project-4.feature_5") || "",
-        feature_6: t("detailProject.project-4.feature_6") || "",
-        feature_7: t("detailProject.project-4.feature_7") || "",
+
         frontend: t("detailProject.project-4.frontend"),
         backend: t("detailProject.project-4.backend"),
         role: t("detailProject.project-4.role"),
